@@ -23,7 +23,7 @@ export function renderJobApplyModal() {
 
             <div class="form-group">
               <label class="form-label">Position Title</label>
-              <input type="text" class="form-input" id="job-role-display" readonly style="background: #151820; color: var(--accent-bronze); font-weight: 600;">
+              <input type="text" class="form-input" id="job-role-display" readonly style="background: var(--bg-secondary); color: var(--brand-blue); font-weight: 700;">
             </div>
 
             <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
@@ -56,15 +56,15 @@ export function renderJobApplyModal() {
             <div class="form-group">
               <label class="form-label">Resume / CV Attachment <span class="req">*</span></label>
               <input type="file" class="form-input" id="applicant-resume" accept=".pdf,.doc,.docx" required>
-              <span style="font-size: 0.72rem; color: var(--text-muted);">PDF or DOCX format (Max 10MB)</span>
+              <span style="font-size: 0.75rem; color: var(--text-muted);">PDF or DOCX format (Max 10MB)</span>
             </div>
 
-            <div id="job-app-success" style="display: none; background: rgba(56, 193, 114, 0.1); border: 1px solid var(--status-green); padding: 1rem; margin-bottom: 1.5rem; text-align: center;">
+            <div id="job-app-success" style="display: none; background: rgba(30, 142, 62, 0.1); border: 1px solid var(--status-green); padding: 1rem; margin-bottom: 1.5rem; text-align: center;">
               <strong style="color: var(--status-green); display: block; font-family: var(--font-mono); font-size: 0.85rem;">APPLICATION TRANSMITTED SUCCESSFULLY</strong>
-              <span style="font-size: 0.8rem; color: var(--text-secondary);">Our HR and Engineering Team at Pune Facility will review your credentials.</span>
+              <span style="font-size: 0.82rem; color: var(--text-secondary);">Our HR and Engineering Team at Pune Facility will review your credentials.</span>
             </div>
 
-            <div style="display: flex; justify-content: flex-end; gap: 1rem; border-top: 1px solid var(--steel-border); padding-top: 1.5rem; margin-top: 1rem;">
+            <div style="display: flex; justify-content: flex-end; gap: 1rem; border-top: 1px solid var(--border-color); padding-top: 1.5rem; margin-top: 1rem;">
               <button type="button" class="btn btn-secondary btn-sm" id="job-cancel-btn">Cancel</button>
               <button type="submit" class="btn btn-primary btn-sm" id="job-submit-btn">Submit Application</button>
             </div>

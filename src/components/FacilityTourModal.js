@@ -19,7 +19,7 @@ export function renderFacilityTourModal() {
         </div>
 
         <div class="modal-body">
-          <p style="font-size: 0.88rem; margin-bottom: 1.5rem;">
+          <p style="font-size: 0.88rem; margin-bottom: 1.5rem; color: var(--text-secondary);">
             We invite OEM supplier quality engineers, procurement directors, and technical teams to audit our machining halls, Zeiss metrology lab, and cleanroom assembly lines in Pune.
           </p>
 
@@ -76,12 +76,12 @@ export function renderFacilityTourModal() {
               <input type="text" class="form-input" id="tour-focus" placeholder="e.g. Zeiss CMM verification, Inconel machining capabilities, PPAP audit...">
             </div>
 
-            <div id="tour-success-msg" style="display: none; background: rgba(56, 193, 114, 0.1); border: 1px solid var(--status-green); padding: 1rem; margin-bottom: 1.5rem; text-align: center;">
+            <div id="tour-success-msg" style="display: none; background: rgba(30, 142, 62, 0.1); border: 1px solid var(--status-green); padding: 1rem; margin-bottom: 1.5rem; text-align: center;">
               <strong style="color: var(--status-green); display: block; font-family: var(--font-mono); font-size: 0.85rem;">FACILITY VISIT REQUEST CONFIRMED</strong>
               <span style="font-size: 0.8rem; color: var(--text-secondary);">Our Plant Operations Directorate will issue visitor access badges and logistics coordinates.</span>
             </div>
 
-            <div style="display: flex; justify-content: flex-end; gap: 1rem; border-top: 1px solid var(--steel-border); padding-top: 1.5rem; margin-top: 1rem;">
+            <div style="display: flex; justify-content: flex-end; gap: 1rem; border-top: 1px solid var(--border-color); padding-top: 1.5rem; margin-top: 1rem;">
               <button type="button" class="btn btn-secondary btn-sm" id="tour-cancel-btn">Cancel</button>
               <button type="submit" class="btn btn-primary btn-sm" id="tour-submit-btn">Confirm Visit Request</button>
             </div>

@@ -53,8 +53,8 @@ export function renderRfqModal() {
             <!-- STEP 1: Segment & Component Type -->
             <div class="rfq-step-pane" data-step="1" id="rfq-step-1">
               <div style="margin-bottom: 1.5rem;">
-                <h4 style="font-size: 1.1rem; margin-bottom: 0.4rem;">Select Industry Sector & Component Classification</h4>
-                <p style="font-size: 0.85rem;">Specify your application requirements for appropriate tooling and QA protocol allocation.</p>
+                <h4 style="font-size: 1.1rem; margin-bottom: 0.4rem; color: var(--text-primary);">Select Industry Sector & Component Classification</h4>
+                <p style="font-size: 0.88rem; color: var(--text-secondary);">Specify your application requirements for appropriate tooling and QA protocol allocation.</p>
               </div>
 
               <div class="form-group">
@@ -90,17 +90,17 @@ export function renderRfqModal() {
             <!-- STEP 2: Drawings & CAD Upload -->
             <div class="rfq-step-pane" data-step="2" id="rfq-step-2" style="display: none;">
               <div style="margin-bottom: 1.5rem;">
-                <h4 style="font-size: 1.1rem; margin-bottom: 0.4rem;">Engineering Drawings & Technical Specifications</h4>
-                <p style="font-size: 0.85rem;">Upload 2D drawings (PDF / DWG / DXF) and 3D CAD models (STEP / IGES / Parasolid / SLDPRT).</p>
+                <h4 style="font-size: 1.1rem; margin-bottom: 0.4rem; color: var(--text-primary);">Engineering Drawings & Technical Specifications</h4>
+                <p style="font-size: 0.88rem; color: var(--text-secondary);">Upload 2D drawings (PDF / DWG / DXF) and 3D CAD models (STEP / IGES / Parasolid / SLDPRT).</p>
               </div>
 
               <div class="dropzone-box" id="rfq-dropzone">
-                <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#C98A4B" stroke-width="1.5" style="margin-bottom: 0.8rem;">
+                <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#0B3A66" stroke-width="1.75" style="margin-bottom: 0.8rem;">
                   <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
                   <polyline points="17 8 12 3 7 8"></polyline>
                   <line x1="12" y1="3" x2="12" y2="15"></line>
                 </svg>
-                <div style="font-family: var(--font-mono); font-size: 0.85rem; font-weight: 600; margin-bottom: 0.25rem;">
+                <div style="font-family: var(--font-mono); font-size: 0.85rem; font-weight: 700; margin-bottom: 0.25rem; color: var(--brand-blue);">
                   DRAG & DROP CAD OR DRAWING FILES HERE
                 </div>
                 <div style="font-size: 0.75rem; color: var(--text-muted); margin-bottom: 1rem;">
@@ -125,8 +125,8 @@ export function renderRfqModal() {
             <!-- STEP 3: Material & Tolerance Grade -->
             <div class="rfq-step-pane" data-step="3" id="rfq-step-3" style="display: none;">
               <div style="margin-bottom: 1.5rem;">
-                <h4 style="font-size: 1.1rem; margin-bottom: 0.4rem;">Material Alloy & Dimensional Tolerance</h4>
-                <p style="font-size: 0.85rem;">Select raw material specification and required machining precision grade.</p>
+                <h4 style="font-size: 1.1rem; margin-bottom: 0.4rem; color: var(--text-primary);">Material Alloy & Dimensional Tolerance</h4>
+                <p style="font-size: 0.88rem; color: var(--text-secondary);">Select raw material specification and required machining precision grade.</p>
               </div>
 
               <div class="form-group">
@@ -171,8 +171,8 @@ export function renderRfqModal() {
             <!-- STEP 4: Quantity & Timeline -->
             <div class="rfq-step-pane" data-step="4" id="rfq-step-4" style="display: none;">
               <div style="margin-bottom: 1.5rem;">
-                <h4 style="font-size: 1.1rem; margin-bottom: 0.4rem;">Production Volume & Schedule</h4>
-                <p style="font-size: 0.85rem;">Define sample validation batch, annual volume, and target delivery requirements.</p>
+                <h4 style="font-size: 1.1rem; margin-bottom: 0.4rem; color: var(--text-primary);">Production Volume & Schedule</h4>
+                <p style="font-size: 0.88rem; color: var(--text-secondary);">Define sample validation batch, annual volume, and target delivery requirements.</p>
               </div>
 
               <div class="form-group">
@@ -207,8 +207,8 @@ export function renderRfqModal() {
             <!-- STEP 5: Contact & NDA Request -->
             <div class="rfq-step-pane" data-step="5" id="rfq-step-5" style="display: none;">
               <div style="margin-bottom: 1.5rem;">
-                <h4 style="font-size: 1.1rem; margin-bottom: 0.4rem;">OEM / Enterprise Contact Details</h4>
-                <p style="font-size: 0.85rem;">Our Pune engineering estimation desk will deliver a comprehensive DFM and price proposal within 24 hours.</p>
+                <h4 style="font-size: 1.1rem; margin-bottom: 0.4rem; color: var(--text-primary);">OEM / Enterprise Contact Details</h4>
+                <p style="font-size: 0.88rem; color: var(--text-secondary);">Our Pune engineering estimation desk will deliver a comprehensive DFM and price proposal within 24 hours.</p>
               </div>
 
               <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
@@ -238,9 +238,9 @@ export function renderRfqModal() {
                 <input type="text" class="form-input" id="rfq-country" placeholder="e.g. Pune, India / Munich, Germany / Houston, USA">
               </div>
 
-              <div style="display: flex; align-items: center; gap: 0.75rem; padding: 0.75rem; background: rgba(199, 203, 206, 0.04); border: 1px solid var(--steel-border); margin-bottom: 1.5rem;">
-                <input type="checkbox" id="rfq-nda-req" style="accent-color: var(--accent-bronze); width: 18px; height: 18px;">
-                <label for="rfq-nda-req" style="font-size: 0.8rem; color: var(--text-secondary); cursor: pointer;">
+              <div style="display: flex; align-items: center; gap: 0.75rem; padding: 0.75rem; background: var(--bg-secondary); border: 1px solid var(--border-color); margin-bottom: 1.5rem;">
+                <input type="checkbox" id="rfq-nda-req" style="accent-color: var(--brand-blue); width: 18px; height: 18px;">
+                <label for="rfq-nda-req" style="font-size: 0.82rem; color: var(--text-secondary); cursor: pointer;">
                   Please execute a Mutual Non-Disclosure Agreement (M-NDA) prior to technical review.
                 </label>
               </div>
@@ -248,7 +248,7 @@ export function renderRfqModal() {
 
             <!-- Confirmation View (Shown on submit) -->
             <div class="rfq-step-pane" id="rfq-success-pane" style="display: none; text-align: center; padding: 2rem 1rem;">
-              <div style="width: 60px; height: 60px; border-radius: 50%; background: rgba(56, 193, 114, 0.15); border: 2px solid var(--status-green); display: flex; align-items: center; justify-content: center; margin: 0 auto 1.5rem auto; color: var(--status-green);">
+              <div style="width: 60px; height: 60px; border-radius: 50%; background: rgba(30, 142, 62, 0.1); border: 2px solid var(--status-green); display: flex; align-items: center; justify-content: center; margin: 0 auto 1.5rem auto; color: var(--status-green);">
                 <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
                   <polyline points="20 6 9 17 4 12"></polyline>
                 </svg>
@@ -258,17 +258,17 @@ export function renderRfqModal() {
                 <span class="pulse-dot"></span> RFQ SUBMITTED TO ESTIMATION DESK
               </div>
 
-              <h3 style="font-size: 1.5rem; margin-bottom: 0.5rem;">Quotation Request Registered</h3>
-              <p style="font-size: 0.9rem; max-width: 520px; margin: 0 auto 1.5rem auto;">
+              <h3 style="font-size: 1.5rem; margin-bottom: 0.5rem; color: var(--text-primary);">Quotation Request Registered</h3>
+              <p style="font-size: 0.92rem; max-width: 520px; margin: 0 auto 1.5rem auto; color: var(--text-secondary);">
                 Your technical drawing package and parameters have been transmitted to our senior tooling estimation engineers at Pune Chakan Facility.
               </p>
 
-              <div style="background: #0E1014; border: 1px solid var(--steel-border); padding: 1rem 1.5rem; display: inline-block; font-family: var(--font-mono); font-size: 0.85rem; margin-bottom: 1.5rem;">
-                REFERENCE ID: <span id="rfq-ref-id" style="color: var(--accent-bronze); font-weight: 700;">PLC-RFQ-2026-8942</span>
+              <div style="background: var(--bg-secondary); border: 1px solid var(--border-color); padding: 1rem 1.5rem; display: inline-block; font-family: var(--font-mono); font-size: 0.85rem; margin-bottom: 1.5rem;">
+                REFERENCE ID: <span id="rfq-ref-id" style="color: var(--brand-blue); font-weight: 700;">PLC-RFQ-2026-8942</span>
               </div>
 
-              <div style="font-size: 0.8rem; color: var(--text-muted); margin-bottom: 1.5rem;">
-                Direct Engineer Hotline: <strong style="color: var(--text-primary);">+91 9130303006</strong> · <strong style="color: var(--text-primary);">sales@primelinecomponents.in</strong>
+              <div style="font-size: 0.82rem; color: var(--text-muted); margin-bottom: 1.5rem;">
+                Direct Engineer Hotline: <strong style="color: var(--text-primary);">+91 9130303006</strong> · <strong style="color: var(--brand-blue);">sales@primelinecomponents.in</strong>
               </div>
 
               <button type="button" class="btn btn-secondary" id="rfq-finish-btn">
@@ -277,7 +277,7 @@ export function renderRfqModal() {
             </div>
 
             <!-- Modal Nav Actions -->
-            <div class="modal-actions" id="rfq-action-bar" style="display: flex; justify-content: space-between; align-items: center; border-top: 1px solid var(--steel-border); padding-top: 1.5rem; margin-top: 1rem;">
+            <div class="modal-actions" id="rfq-action-bar" style="display: flex; justify-content: space-between; align-items: center; border-top: 1px solid var(--border-color); padding-top: 1.5rem; margin-top: 1rem;">
               <button type="button" class="btn btn-secondary btn-sm" id="rfq-prev-btn" style="visibility: hidden;">
                 ← Back
               </button>
@@ -460,10 +460,10 @@ export function initRfqModalEvents() {
     files.forEach(file => {
       uploadedFiles.push(file);
       const row = document.createElement('div');
-      row.style.cssText = 'background:#13161C; border:1px solid var(--steel-border); padding:0.6rem 0.85rem; font-family:var(--font-mono); font-size:0.75rem; display:flex; justify-content:space-between; align-items:center;';
+      row.style.cssText = 'background:var(--bg-secondary); border:1px solid var(--border-color); padding:0.6rem 0.85rem; font-family:var(--font-mono); font-size:0.75rem; display:flex; justify-content:space-between; align-items:center;';
       row.innerHTML = `
-        <span>📄 ${file.name} (${(file.size / (1024 * 1024)).toFixed(2)} MB)</span>
-        <span style="color:var(--status-green);">✓ ATTACHED</span>
+        <span style="color:var(--text-primary);">📄 ${file.name} (${(file.size / (1024 * 1024)).toFixed(2)} MB)</span>
+        <span style="color:var(--status-green); font-weight:700;">✓ ATTACHED</span>
       `;
       fileList.appendChild(row);
     });

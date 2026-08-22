@@ -109,7 +109,7 @@ button, input, select, textarea {
   color: inherit;
 }
 
-/* Containers & Section Layouts */
+/* Utility Containers & Grids */
 .container {
   width: 100%;
   max-width: var(--container-max);
@@ -131,6 +131,31 @@ button, input, select, textarea {
   background: var(--border-color);
   margin: 0;
 }
+
+.page-header-white {
+  background-color: #FFFFFF;
+  border-bottom: 1px solid var(--border-color);
+  padding-top: clamp(3.5rem, 6vh, 5.5rem);
+  padding-bottom: clamp(3.5rem, 6vh, 5.5rem);
+  position: relative;
+}
+
+.tech-card {
+  background: #FFFFFF;
+  border: 1px solid var(--border-color);
+  padding: clamp(1.5rem, 3vw, 2.25rem);
+  border-radius: var(--border-radius-sm);
+  box-shadow: 0 4px 16px rgba(11, 58, 102, 0.04);
+  position: relative;
+  transition: all var(--transition-smooth);
+}
+
+.tech-card:hover {
+  border-color: var(--brand-blue-hover);
+  box-shadow: 0 10px 28px rgba(11, 58, 102, 0.08);
+  transform: translateY(-2px);
+}
+
 
 /* Precision Technical Badges */
 .tech-tag {
