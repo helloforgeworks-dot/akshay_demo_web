@@ -3,363 +3,437 @@ import { COMPANY_DATA } from '../data/companyData.js';
 export function renderHomePage() {
   return `
     <main class="page-content">
-      <!-- 1. LUXURY HERO SECTION -->
-      <section class="hero-section" style="position: relative; min-height: 92vh; display: flex; align-items: center; overflow: hidden; border-bottom: 1px solid var(--steel-border);">
-        <canvas id="hero-tech-canvas" style="position: absolute; inset: 0; width: 100%; height: 100%; z-index: 1;"></canvas>
-        <div class="grid-bg-overlay"></div>
+      <!-- 1. HERO SECTION (WHITE & BLUE PRECISION ENGINEERING SPLIT) -->
+      <section class="hero-white-blue">
+        <div class="hero-cad-grid"></div>
 
-        <div class="container" style="position: relative; z-index: 2; padding-top: 3rem; padding-bottom: 3rem;">
-          <div style="max-width: 920px;">
-            <div style="display: flex; flex-wrap: wrap; gap: 0.75rem; align-items: center; margin-bottom: 1.5rem;">
-              <div class="tech-tag">
-                <span class="pulse-dot"></span> PUNE PRECISION MANUFACTURING HUB
-              </div>
-              <div class="tech-tag neutral">
-                ABHANG GROUP · 25+ YEARS HERITAGE
-              </div>
-              <div class="tech-tag success">
-                ±0.002 MM TOLERANCE CERTIFIED
-              </div>
-            </div>
-
-            <h1 style="font-size: clamp(2.6rem, 5.8vw, 4.8rem); line-height: 1.06; margin-bottom: 1.5rem; text-transform: uppercase;">
-              Precision is not a claim here — <span style="color: var(--accent-bronze); font-style: normal;">it's a certification.</span>
-            </h1>
-
-            <p style="font-size: clamp(1.05rem, 1.6vw, 1.25rem); color: var(--text-secondary); max-width: 740px; margin-bottom: 2.5rem; line-height: 1.7;">
-              ${COMPANY_DATA.heroSubtext}
-            </p>
-
-            <div style="display: flex; flex-wrap: wrap; gap: 1.25rem; align-items: center; margin-bottom: 3.5rem;">
-              <button type="button" class="btn btn-primary btn-lg trigger-rfq-modal">
-                <span>Request a Quote</span>
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-                  <line x1="7" y1="17" x2="17" y2="7"></line>
-                  <polyline points="7 7 17 7 17 17"></polyline>
-                </svg>
-              </button>
-
-              <button type="button" class="btn btn-secondary btn-lg trigger-profile-modal">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
-                  <polyline points="7 10 12 15 17 10"></polyline>
-                  <line x1="12" y1="15" x2="12" y2="3"></line>
-                </svg>
-                <span>Download Company Profile</span>
-              </button>
-
-              <a href="tel:+919130303006" class="btn btn-outline-bronze btn-lg">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
-                </svg>
-                <span>+91 9130303006</span>
-              </a>
-            </div>
-
-            <!-- Live Spindle Metrology Feed -->
-            <div style="background: rgba(16, 18, 22, 0.8); border: 1px solid var(--steel-border); padding: 1rem 1.5rem; display: flex; flex-wrap: wrap; gap: 2rem; align-items: center;">
-              <div style="display: flex; align-items: center; gap: 0.6rem;">
-                <span class="pulse-dot"></span>
-                <span style="font-family: var(--font-mono); font-size: 0.72rem; color: var(--text-muted);">ACTIVE QA CALIBRATION:</span>
-                <span style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--text-primary); font-weight: 600;">ZEISS CMM ACCURACY 0.9µm</span>
-              </div>
-              <div style="display: flex; align-items: center; gap: 0.6rem;">
-                <span style="font-family: var(--font-mono); font-size: 0.72rem; color: var(--text-muted);">PLANT FLEET:</span>
-                <span style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--accent-bronze); font-weight: 600;">100+ CNC/VMC SPINDLES</span>
-              </div>
-              <div style="display: flex; align-items: center; gap: 0.6rem;">
-                <span style="font-family: var(--font-mono); font-size: 0.72rem; color: var(--text-muted);">LOCATION:</span>
-                <span style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--text-primary);">CHAKAN & BHOSARI MIDC, PUNE</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- 2. "ENGINEERING-LED" POSITIONING SECTION -->
-      <section class="section-py" style="background: #0C0E12;">
         <div class="container">
-          <div style="display: grid; grid-template-columns: 1.1fr 1fr; gap: clamp(2.5rem, 5vw, 5rem); align-items: center;">
+          <div class="hero-split-grid">
+            <!-- Left Column: Editorial Information Layer -->
             <div>
-              <div class="tech-tag" style="margin-bottom: 1rem;">POSITIONING MANIFESTO</div>
-              <h2 style="font-size: clamp(2rem, 3.8vw, 3rem); line-height: 1.15; margin-bottom: 1.5rem;">
-                Engineering-led, not just contract-manufactured.
-              </h2>
-              <p style="font-size: 1.05rem; line-height: 1.8; margin-bottom: 1.25rem;">
-                Most machine shops execute whatever drawing is handed to them. At Primeline Components, our manufacturing process begins with deep Design for Manufacturability (DFM) audits, cutting-force simulation, and metallurgical validation.
+              <!-- Eyebrow -->
+              <div class="hero-eyebrow">
+                <span class="hero-eyebrow-top">PUNE, INDIA</span>
+                <span class="hero-eyebrow-sub">PRECISION ENGINEERING / CNC MANUFACTURING</span>
+              </div>
+
+              <!-- Headline -->
+              <h1 class="hero-headline">
+                PRECISION<br />
+                IS NOT A CLAIM.<br />
+                <span class="headline-blue">IT'S A CERTIFICATION.</span>
+              </h1>
+
+              <!-- Description -->
+              <p class="hero-description">
+                Engineering-led CNC machining, precision components and sub-assemblies for demanding automotive, defence, oil & gas and hydraulic applications.
               </p>
-              <p style="font-size: 0.95rem; line-height: 1.8; margin-bottom: 2rem; color: var(--text-muted);">
-                We operate with the discipline of a Swiss watchmaker and the scale of an industrial powerhouse. When machining Inconel valve trims for deepwater exploration or titanium guidance mounts for defence, there is no margin for thermal drift or dimensional compromise.
-              </p>
 
-              <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.25rem;">
-                <div style="background: var(--bg-surface); border: 1px solid var(--steel-border); padding: 1.25rem;">
-                  <div style="font-family: var(--font-mono); font-size: 0.72rem; color: var(--accent-bronze); margin-bottom: 0.35rem;">TOLERANCE THRESHOLD</div>
-                  <div style="font-family: var(--font-display); font-size: 1.5rem; font-weight: 700; color: var(--text-primary);">± 0.002 mm</div>
-                  <div style="font-size: 0.75rem; color: var(--text-muted);">Zeiss 3D CMM Volumetric Verified</div>
-                </div>
-
-                <div style="background: var(--bg-surface); border: 1px solid var(--steel-border); padding: 1.25rem;">
-                  <div style="font-family: var(--font-mono); font-size: 0.72rem; color: var(--accent-bronze); margin-bottom: 0.35rem;">PROCESS CAPABILITY</div>
-                  <div style="font-family: var(--font-display); font-size: 1.5rem; font-weight: 700; color: var(--text-primary);">Cpk ≥ 1.67</div>
-                  <div style="font-size: 0.75rem; color: var(--text-muted);">Real-Time Shopfloor SPC Tracking</div>
-                </div>
-              </div>
-            </div>
-
-            <!-- Precision Spec Table Box -->
-            <div style="background: #111317; border: 1px solid var(--steel-border-highlight); padding: 2rem; position: relative;">
-              <div style="display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid var(--steel-border); padding-bottom: 1rem; margin-bottom: 1.5rem;">
-                <span style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--accent-bronze); font-weight: 700; letter-spacing: 0.1em;">
-                  METROLOGY & PROCESS SPECIFICATION
-                </span>
-                <span class="tech-tag success" style="font-size: 0.65rem;">ACTIVE PRODUCTION</span>
-              </div>
-
-              <div style="display: flex; flex-direction: column; gap: 1rem;">
-                <div class="spec-row">
-                  <span class="spec-key">Machining Envelope (CNC)</span>
-                  <span class="spec-val">Ø3 mm to Ø450 mm x 1200 mm</span>
-                </div>
-                <div class="spec-row">
-                  <span class="spec-key">Milling Travel (VMC)</span>
-                  <span class="spec-val">X: 1200mm · Y: 600mm · Z: 650mm</span>
-                </div>
-                <div class="spec-row">
-                  <span class="spec-key">Surface Roughness</span>
-                  <span class="spec-val">Down to Ra 0.05 µm (Mirror Lap)</span>
-                </div>
-                <div class="spec-row">
-                  <span class="spec-key">Exotic Superalloys</span>
-                  <span class="spec-val">Inconel 718/625, Monel 400, Duplex 2205</span>
-                </div>
-                <div class="spec-row">
-                  <span class="spec-key">Pressure Rating Proof</span>
-                  <span class="spec-val">Hydrostatic up to 700 Bar (10,150 PSI)</span>
-                </div>
-                <div class="spec-row">
-                  <span class="spec-key">Quality Architecture</span>
-                  <span class="spec-val">ISO 9001:2015 · IATF 16949 · TUV Austria</span>
-                </div>
-              </div>
-
-              <div style="margin-top: 1.75rem; padding-top: 1.25rem; border-top: 1px dashed var(--steel-border); display: flex; justify-content: space-between; align-items: center;">
-                <span style="font-size: 0.8rem; color: var(--text-muted);">Have custom GD&T tolerances?</span>
-                <button type="button" class="btn btn-outline-bronze btn-sm trigger-rfq-modal">
-                  <span>Submit Drawing</span>
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <hr class="section-divider">
-
-      <!-- 3. CAPABILITIES OVERVIEW -->
-      <section class="section-py">
-        <div class="container">
-          <div class="section-header">
-            <div class="tech-tag">MANUFACTURING CAPABILITIES</div>
-            <h2 class="section-title">Engineered to Micron-Level Exactness</h2>
-            <p class="section-desc">
-              Six synchronized manufacturing divisions under one integrated Pune campus — executing everything from prototype pilot validation to high-volume Tier-1 production.
-            </p>
-          </div>
-
-          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); gap: 1.5rem;">
-            ${COMPANY_DATA.capabilities.map((cap, idx) => `
-              <div class="tech-card">
-                <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 1.25rem;">
-                  <span style="font-family: var(--font-mono); font-size: 0.72rem; color: var(--accent-bronze); font-weight: 700;">0${idx + 1} // CAPABILITY</span>
-                  <span class="tech-tag neutral" style="font-size: 0.65rem;">${cap.tolerance}</span>
-                </div>
-
-                <h3 style="font-size: 1.35rem; margin-bottom: 0.6rem;">${cap.title}</h3>
-                <p style="font-size: 0.88rem; color: var(--text-secondary); margin-bottom: 1.25rem; min-height: 48px;">
-                  ${cap.description}
-                </p>
-
-                <div style="background: #12151B; border: 1px solid var(--steel-border); padding: 0.85rem 1rem; margin-bottom: 1.5rem;">
-                  <div style="font-family: var(--font-mono); font-size: 0.7rem; color: var(--text-muted); text-transform: uppercase; margin-bottom: 0.25rem;">EQUIPMENT & CONTROLS:</div>
-                  <div style="font-size: 0.78rem; color: var(--text-primary);">${cap.equipment}</div>
-                </div>
-
-                <a href="/capabilities" class="nav-route" data-path="/capabilities" style="display: inline-flex; align-items: center; gap: 0.5rem; font-family: var(--font-mono); font-size: 0.75rem; color: var(--accent-bronze); font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em;">
-                  <span>Explore Technical Specs</span>
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                    <line x1="5" y1="12" x2="19" y2="12"></line>
-                    <polyline points="12 5 19 12 12 19"></polyline>
+              <!-- Rectangular Action Buttons -->
+              <div class="hero-cta-group">
+                <button type="button" class="btn btn-primary btn-lg trigger-rfq-modal">
+                  <span>REQUEST A QUOTE</span>
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                    <line x1="7" y1="17" x2="17" y2="7"></line>
+                    <polyline points="7 7 17 7 17 17"></polyline>
                   </svg>
+                </button>
+
+                <a href="/capabilities" class="btn btn-secondary btn-lg nav-route" data-path="/capabilities">
+                  <span>EXPLORE OUR CAPABILITIES</span>
                 </a>
               </div>
-            `).join('')}
+
+              <!-- Technical Specification Pill -->
+              <div class="hero-meta-strip">
+                <div class="hero-meta-item">
+                  <span class="pulse-dot"></span>
+                  <span>TOLERANCE: <strong>±0.002 MM</strong></span>
+                </div>
+                <div class="hero-meta-item">
+                  <span>METROLOGY: <strong>ZEISS 3D CMM</strong></span>
+                </div>
+                <div class="hero-meta-item">
+                  <span>AUDIT: <strong>IATF & TUV CERTIFIED</strong></span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Right Column: Premium Industrial Photography Showcase -->
+            <div>
+              <div class="hero-media-frame">
+                <img 
+                  src="/images/hero_cnc_spindle.jpg" 
+                  alt="Primeline Components Multi-Axis Precision CNC Machining Spindle Pune" 
+                  class="hero-media-img"
+                />
+                <div class="hero-media-caption">
+                  <div>
+                    <div style="font-family: var(--font-mono); font-size: 0.74rem; font-weight: 700; color: var(--brand-blue); text-transform: uppercase; letter-spacing: 0.1em;">
+                      MULTI-AXIS PRECISION MACHINING
+                    </div>
+                    <div style="font-size: 0.72rem; color: var(--text-secondary);">
+                      CHAKAN & BHOSARI MIDC PLANTS · PUNE, INDIA
+                    </div>
+                  </div>
+                  <div style="font-family: var(--font-mono); font-size: 0.7rem; font-weight: 700; color: var(--status-green);">
+                    ● ACTIVE PRODUCTION
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
 
-      <!-- 4. PRODUCT SEGMENTS STRIP WITH TECHNICAL BLUEPRINT INSPECTOR -->
-      <section class="section-py" style="background: #090A0D; border-top: 1px solid var(--steel-border); border-bottom: 1px solid var(--steel-border);">
+      <!-- 2. ENGINEERING DATA STRIP (WHITE SPECIFICATION SHEET) -->
+      <section class="data-strip-section">
+        <div class="container">
+          <div class="data-strip-grid">
+            <div class="data-strip-item">
+              <div class="data-strip-val">
+                <span class="counter-number" data-target="25">25</span><span>+</span>
+              </div>
+              <div class="data-strip-label">YEARS GROUP EXPERIENCE</div>
+              <div class="data-strip-sub">Abhang Group Foundation Since 1996</div>
+            </div>
+
+            <div class="data-strip-item">
+              <div class="data-strip-val">
+                <span class="counter-number" data-target="100">100</span><span>+</span>
+              </div>
+              <div class="data-strip-label">ADVANCED MACHINES</div>
+              <div class="data-strip-sub">Multi-Axis CNC & VMC Fleets in Pune</div>
+            </div>
+
+            <div class="data-strip-item">
+              <div class="data-strip-val">
+                <span class="counter-number" data-target="100">100</span><span>+</span>
+              </div>
+              <div class="data-strip-label">QUALIFIED ENGINEERS</div>
+              <div class="data-strip-sub">Dedicated Metrologists & Shopfloor Specialists</div>
+            </div>
+
+            <div class="data-strip-item">
+              <div class="data-strip-val" style="font-size: clamp(1.5rem, 2.2vw, 2.1rem);">
+                ISO 9001:2015
+              </div>
+              <div class="data-strip-label">CERTIFIED QUALITY SYSTEM</div>
+              <div class="data-strip-sub">TUV Austria / IAF KAB / IATF Compliant</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 3. INTRODUCTION: "BUILT FOR PRECISION" SECTION -->
+      <section class="section-py" style="background: #FFFFFF;">
+        <div class="container">
+          <div class="intro-split-grid">
+            <!-- Left Column: Manifesto & Specifications -->
+            <div>
+              <div class="tech-tag" style="margin-bottom: 1.25rem;">
+                ENGINEERING-LED MANUFACTURING
+              </div>
+              
+              <h2 class="intro-statement">
+                BUILT FOR PRECISION.<br />
+                <span style="color: var(--brand-blue);">ENGINEERED FOR PERFORMANCE.</span>
+              </h2>
+              
+              <p class="intro-narrative">
+                Primeline Components combines precision machining, advanced manufacturing infrastructure and disciplined quality systems to deliver critical components for demanding OEM applications.
+              </p>
+              
+              <p class="intro-narrative-sub">
+                Our manufacturing process begins with deep Design for Manufacturability (DFM) audits, cutting-force simulation, and metallurgical validation. When machining Inconel valve trims or titanium guidance mounts, there is no margin for thermal drift.
+              </p>
+
+              <div class="intro-spec-pills">
+                <div class="intro-pill">
+                  <div class="intro-pill-key">DIMENSIONAL TOLERANCE</div>
+                  <div class="intro-pill-val">±0.002 mm</div>
+                  <div class="intro-pill-sub">Zeiss 3D CMM Volumetric Verified</div>
+                </div>
+
+                <div class="intro-pill">
+                  <div class="intro-pill-key">PROCESS CAPABILITY</div>
+                  <div class="intro-pill-val">Cpk ≥ 1.67</div>
+                  <div class="intro-pill-sub">Real-Time Shopfloor SPC Tracking</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Right Column: Precision Component Feature -->
+            <div>
+              <div class="intro-photo-frame">
+                <img 
+                  src="/images/precision_machined_flange.jpg" 
+                  alt="Precision Machined High Pressure Flange Component Primeline Pune" 
+                  class="intro-photo-img"
+                />
+                <div style="padding: 1.25rem; display: flex; justify-content: space-between; align-items: center; background: #FFFFFF; border-top: 1px solid var(--border-color);">
+                  <div>
+                    <strong style="font-family: var(--font-mono); font-size: 0.76rem; color: var(--brand-blue); text-transform: uppercase;">
+                      PRECISION VALVE TRIM MACHINING
+                    </strong>
+                    <div style="font-size: 0.72rem; color: var(--text-secondary);">
+                      INCONEL 718 / DUPLEX 2205 / ASTM A182
+                    </div>
+                  </div>
+                  <span class="tech-tag" style="font-size: 0.65rem;">RA 0.05 µm</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 4. CAPABILITIES SECTION (LIGHT BLUE-GREY #F4F7FA) -->
+      <section class="section-py" style="background: #F4F7FA; border-top: 1px solid var(--border-color); border-bottom: 1px solid var(--border-color);">
         <div class="container">
           <div class="section-header">
-            <div class="tech-tag">PRODUCT SEGMENTS</div>
-            <h2 class="section-title">Critical Components for Demanding Sectors</h2>
+            <div class="tech-tag" style="margin-bottom: 0.75rem;">MANUFACTURING DIVISIONS</div>
+            <h2 class="section-title">ENGINEERING CAPABILITIES</h2>
             <p class="section-desc">
-              Zero tolerance for failure. Our manufactured parts power subsea flow lines, aircraft guidance, automotive fuel delivery, and high-pressure fluid power systems.
+              Six synchronized precision manufacturing divisions operating across Pune's premier industrial corridors.
             </p>
           </div>
 
-          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(380px, 1fr)); gap: 2rem;">
-            ${COMPANY_DATA.productSegments.map((seg) => `
-              <div class="blueprint-card">
-                <div class="blueprint-header">
-                  <div>
-                    <span class="blueprint-meta">${seg.badge}</span>
-                    <h3 style="font-size: 1.18rem; margin-top: 0.25rem;">${seg.title}</h3>
-                  </div>
-                  <span class="tech-tag" style="font-size: 0.65rem;">${seg.tolerances}</span>
+          <div class="cap-horizontal-container">
+            <!-- Left List (01 to 06) -->
+            <div class="cap-list-wrap" id="capability-list">
+              <div class="cap-item-row active" data-cap-index="0">
+                <div class="cap-item-title-group">
+                  <span class="cap-index-num">01</span>
+                  <span class="cap-title-text">PRECISION CNC MACHINING</span>
+                </div>
+                <span class="cap-tag-tolerance">±0.002 MM</span>
+              </div>
+
+              <div class="cap-item-row" data-cap-index="1">
+                <div class="cap-item-title-group">
+                  <span class="cap-index-num">02</span>
+                  <span class="cap-title-text">VMC MACHINING</span>
+                </div>
+                <span class="cap-tag-tolerance">BT50 / 5-AXIS</span>
+              </div>
+
+              <div class="cap-item-row" data-cap-index="2">
+                <div class="cap-item-title-group">
+                  <span class="cap-index-num">03</span>
+                  <span class="cap-title-text">SPECIAL PROCESSES</span>
+                </div>
+                <span class="cap-tag-tolerance">ENP & QPQ</span>
+              </div>
+
+              <div class="cap-item-row" data-cap-index="3">
+                <div class="cap-item-title-group">
+                  <span class="cap-index-num">04</span>
+                  <span class="cap-title-text">SUB-ASSEMBLIES & FABRICATION</span>
+                </div>
+                <span class="cap-tag-tolerance">700 BAR PROOF</span>
+              </div>
+
+              <div class="cap-item-row" data-cap-index="4">
+                <div class="cap-item-title-group">
+                  <span class="cap-index-num">05</span>
+                  <span class="cap-title-text">PLASTICS INJECTION MOULDING</span>
+                </div>
+                <span class="cap-tag-tolerance">50T - 350T</span>
+              </div>
+
+              <div class="cap-item-row" data-cap-index="5">
+                <div class="cap-item-title-group">
+                  <span class="cap-index-num">06</span>
+                  <span class="cap-title-text">RAPID PROTOTYPING</span>
+                </div>
+                <span class="cap-tag-tolerance">5-7 DAY RAMP</span>
+              </div>
+            </div>
+
+            <!-- Right Interactive Dynamic Preview Stage -->
+            <div class="cap-preview-stage" id="capability-preview-stage">
+              <div class="cap-preview-img-frame">
+                <img 
+                  id="cap-preview-img" 
+                  src="/images/hero_cnc_spindle.jpg" 
+                  alt="Capability Machining Operation" 
+                  class="cap-preview-img"
+                />
+              </div>
+
+              <div class="cap-preview-details">
+                <h3 id="cap-preview-title" style="font-size: 1.25rem; font-weight: 800; color: var(--brand-blue);">
+                  01 — Precision CNC Machining
+                </h3>
+                <p id="cap-preview-desc" class="cap-preview-desc">
+                  Ultra-precision turning and multi-axis machining for Inconel 718/625, SS316L, Duplex 2205, and Titanium Gr5 under stringent ±0.002 mm dimensional compliance.
+                </p>
+
+                <div class="cap-preview-specs">
+                  <div><strong style="color: var(--text-primary);">TOLERANCE:</strong> <span id="cap-preview-tol" style="color: var(--brand-blue); font-weight: 700;">±0.002 mm (2 microns)</span></div>
+                  <div><strong style="color: var(--text-primary);">EQUIPMENT:</strong> <span id="cap-preview-equip" style="color: var(--text-secondary);">5-Axis Turning Centers, Dual-Spindle CNC Lathes with Live Tooling</span></div>
                 </div>
 
-                <div class="blueprint-canvas-wrap">
-                  <div class="blueprint-grid-lines"></div>
-                  
-                  <!-- Technical Vector Component Illustration -->
-                  <div style="position: relative; z-index: 2; text-align: center;">
-                    <svg width="140" height="140" viewBox="0 0 100 100" fill="none" stroke="#C98A4B" stroke-width="1.2">
-                      <circle cx="50" cy="50" r="42" stroke-dasharray="3,3" opacity="0.4" />
-                      <circle cx="50" cy="50" r="30" stroke="#C7CBCE" stroke-width="1.5" />
-                      <circle cx="50" cy="50" r="14" fill="rgba(201, 138, 75, 0.15)" stroke="#C98A4B" stroke-width="1.5" />
-                      <line x1="50" y1="8" x2="50" y2="92" stroke="rgba(199,203,206,0.2)" />
-                      <line x1="8" y1="50" x2="92" y2="50" stroke="rgba(199,203,206,0.2)" />
-                      <path d="M35 50 L65 50 M50 35 L50 65" stroke="#C98A4B" stroke-width="1.8" />
-                    </svg>
-                    <div style="font-family: var(--font-mono); font-size: 0.68rem; color: var(--text-muted); margin-top: 0.75rem; letter-spacing: 0.1em;">
-                      ASME / ISO 15156 COMPLIANT
-                    </div>
-                  </div>
-                </div>
-
-                <div class="blueprint-body">
-                  <p style="font-size: 0.85rem; color: var(--text-secondary);">
-                    ${seg.summary}
-                  </p>
-
-                  <div style="background: #12151B; padding: 0.85rem 1rem; border: 1px solid var(--steel-border);">
-                    <div style="font-family: var(--font-mono); font-size: 0.68rem; color: var(--accent-bronze); text-transform: uppercase; margin-bottom: 0.35rem;">TYPICAL COMPONENTS:</div>
-                    <ul style="list-style: square; padding-left: 1.1rem; font-size: 0.78rem; color: var(--text-secondary); line-height: 1.6;">
-                      ${seg.parts.slice(0, 3).map(p => `<li>${p}</li>`).join('')}
-                    </ul>
-                  </div>
-
-                  <div style="display: flex; justify-content: space-between; align-items: center; margin-top: auto; padding-top: 0.85rem; border-top: 1px solid var(--steel-border);">
-                    <span style="font-family: var(--font-mono); font-size: 0.72rem; color: var(--text-muted);">${seg.materials.split(',')[0]}</span>
-                    <button type="button" class="btn btn-outline-bronze btn-sm trigger-rfq-modal">
-                      <span>Quote This Segment</span>
-                    </button>
-                  </div>
+                <div style="margin-top: 0.5rem;">
+                  <a href="/capabilities" class="btn btn-secondary btn-sm nav-route" data-path="/capabilities">
+                    <span>EXPLORE TECHNICAL SPECS →</span>
+                  </a>
                 </div>
               </div>
-            `).join('')}
+            </div>
           </div>
         </div>
       </section>
 
-      <!-- 5. FACTS & FIGURES — ANIMATED COUNTER SECTION -->
-      <section class="section-py" style="background: #0E1015;">
+      <!-- 5. INDUSTRIES SECTION (WHITE BACKGROUND #FFFFFF) -->
+      <section class="section-py" style="background: #FFFFFF;">
         <div class="container">
-          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: clamp(1.5rem, 3vw, 3rem);">
-            ${COMPANY_DATA.stats.map(stat => `
-              <div class="stat-counter-card">
-                <div class="stat-value">
-                  ${stat.prefix ? `<span class="prefix">${stat.prefix}</span>` : ''}
-                  <span class="counter-number" data-target="${stat.value}">${stat.value}</span>
-                  ${stat.suffix ? `<span class="suffix">${stat.suffix}</span>` : ''}
-                </div>
-                <div class="stat-label">${stat.label}</div>
-                <div class="stat-sub">${stat.sub}</div>
-              </div>
-            `).join('')}
+          <div class="section-header">
+            <div class="tech-tag" style="margin-bottom: 0.75rem;">SECTOR EXCELLENCE</div>
+            <h2 class="section-title">PRECISION ACROSS CRITICAL INDUSTRIES</h2>
+            <p class="section-desc">
+              Zero tolerance for failure. Our manufactured parts power subsea flow control, defence guidance, automotive fuel injection, and heavy fluid power systems.
+            </p>
           </div>
-        </div>
-      </section>
 
-      <hr class="section-divider">
-
-      <!-- 6. PUNE FACILITY SPOTLIGHT -->
-      <section class="section-py">
-        <div class="container">
-          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: clamp(2rem, 5vw, 4.5rem); align-items: center;">
-            <div style="position: relative;">
-              <!-- High-End Stylized Facility Showcase Box -->
-              <div style="background: #11141A; border: 1px solid var(--steel-border-highlight); padding: 2.5rem; position: relative;">
-                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 2rem; border-bottom: 1px solid var(--steel-border); padding-bottom: 1rem;">
-                  <span style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--accent-bronze); font-weight: 700;">
-                    PUNE MANUFACTURING ECOSYSTEM
-                  </span>
-                  <span class="tech-tag success" style="font-size: 0.65rem;">AUDIT READY</span>
+          <div class="industry-grid">
+            <!-- 01: AUTOMOTIVE -->
+            <div class="industry-tile">
+              <div class="industry-tile-media">
+                <img src="/images/milled_metal_block.jpg" alt="Automotive Precision Machining" class="industry-tile-img" />
+                <div class="industry-badge-float">IATF 16949 / HIGH VOLUME</div>
+              </div>
+              <div class="industry-tile-body">
+                <h3 class="industry-tile-title">AUTOMOTIVE & EV</h3>
+                <p class="industry-tile-summary">
+                  Safety-critical powertrain, common rail injector bodies, EV motor shafts, and steering linkages with statistical process capability Cpk ≥ 1.67.
+                </p>
+                <div class="industry-components-list">
+                  <div class="industry-list-title">PRECISION PARTS:</div>
+                  <ul class="industry-parts-ul">
+                    <li>Common Rail High-Pressure Injectors</li>
+                    <li>EV Rotor Shafts & Differential Housings</li>
+                    <li>Brake Master Cylinder Pistons</li>
+                  </ul>
                 </div>
-
-                <div style="display: flex; flex-direction: column; gap: 1.5rem;">
-                  <div>
-                    <strong style="color: var(--text-primary); font-family: var(--font-display); font-size: 1.15rem; display: block; margin-bottom: 0.35rem;">
-                      Plant 1 — Chakan MIDC
-                    </strong>
-                    <p style="font-size: 0.85rem; color: var(--text-secondary);">
-                      35,000+ sq. ft. heavy CNC & VMC machining facility with dedicated high-pressure valve testing rig (700 bar) and raw material ultrasonic inspection bay.
-                    </p>
-                  </div>
-
-                  <div>
-                    <strong style="color: var(--text-primary); font-family: var(--font-display); font-size: 1.15rem; display: block; margin-bottom: 0.35rem;">
-                      Plant 2 — Bhosari MIDC
-                    </strong>
-                    <p style="font-size: 0.85rem; color: var(--text-secondary);">
-                      Automotive common-rail injector lines, hydraulic spool honing cells, and temperature-controlled cleanroom sub-assembly department.
-                    </p>
-                  </div>
-
-                  <div>
-                    <strong style="color: var(--text-primary); font-family: var(--font-display); font-size: 1.15rem; display: block; margin-bottom: 0.35rem;">
-                      Plant 3 — Talegaon MIDC / Shivleela Unit
-                    </strong>
-                    <p style="font-size: 0.85rem; color: var(--text-secondary);">
-                      Precision polymer injection moulding tooling room and our pioneering women-led metrology and QA training division.
-                    </p>
-                  </div>
-                </div>
-
-                <div style="margin-top: 2rem; padding-top: 1.5rem; border-top: 1px solid var(--steel-border); display: flex; gap: 1rem;">
-                  <button type="button" class="btn btn-primary btn-sm trigger-tour-modal">
-                    <span>Book a Facility Visit</span>
-                  </button>
-                  <a href="/infrastructure" class="btn btn-secondary btn-sm nav-route" data-path="/infrastructure">
-                    <span>Explore Infrastructure</span>
+                <div class="industry-tile-footer">
+                  <span style="font-family: var(--font-mono); font-size: 0.72rem; color: var(--text-muted);">TOL: ±0.005 MM</span>
+                  <a href="/products" class="industry-link-action nav-route" data-path="/products">
+                    <span>EXPLORE SEGMENT →</span>
                   </a>
                 </div>
               </div>
             </div>
 
-            <div>
-              <div class="tech-tag" style="margin-bottom: 1rem;">FACILITY & METROLOGY EXCELLENCE</div>
-              <h2 style="font-size: clamp(2rem, 3.5vw, 3rem); line-height: 1.15; margin-bottom: 1.5rem;">
-                Located at the Heart of India's Engineering Capital.
-              </h2>
-              <p style="font-size: 1rem; line-height: 1.8; margin-bottom: 1.5rem;">
-                Our 100+ machine fleet is strategically distributed across Chakan, Bhosari, and Talegaon MIDC — the automotive and precision manufacturing epicenter of India.
-              </p>
-              <p style="font-size: 0.92rem; line-height: 1.8; margin-bottom: 2rem; color: var(--text-muted);">
-                Equipped with Zeiss Coordinate Measuring Machines (CMM), optical surface roughness profilometers, and computerized tool presetters, we ensure zero discrepancy between design drawings and shipped batches.
-              </p>
+            <!-- 02: OIL & GAS -->
+            <div class="industry-tile">
+              <div class="industry-tile-media">
+                <img src="/images/precision_machined_flange.jpg" alt="Oil and Gas Valve Components Machining" class="industry-tile-img" />
+                <div class="industry-badge-float">API 6D / 10,000 PSI</div>
+              </div>
+              <div class="industry-tile-body">
+                <h3 class="industry-tile-title">OIL & GAS (VALVES)</h3>
+                <p class="industry-tile-summary">
+                  Critical flow-control valve components engineered in Inconel 625/718 and Duplex steels for extreme sour gas, subsea, and offshore service.
+                </p>
+                <div class="industry-components-list">
+                  <div class="industry-list-title">PRECISION PARTS:</div>
+                  <ul class="industry-parts-ul">
+                    <li>Ball Valve Spheres (Up to Ø350mm)</li>
+                    <li>Splined Stem Shafts & Trunnion Blocks</li>
+                    <li>Stellite Seat Rings & Choke Trims</li>
+                  </ul>
+                </div>
+                <div class="industry-tile-footer">
+                  <span style="font-family: var(--font-mono); font-size: 0.72rem; color: var(--text-muted);">SPHERICITY: 0.002 MM</span>
+                  <a href="/products" class="industry-link-action nav-route" data-path="/products">
+                    <span>EXPLORE SEGMENT →</span>
+                  </a>
+                </div>
+              </div>
+            </div>
 
-              <div style="display: flex; flex-direction: column; gap: 0.75rem;">
-                <div style="display: flex; align-items: center; gap: 0.75rem; font-family: var(--font-mono); font-size: 0.8rem; color: var(--text-secondary);">
-                  <span style="color: var(--accent-bronze);">✓</span> 100% Calibrated Zeiss 3D CMM Metrology Lab (20°C ±0.5°C)
+            <!-- 03: DEFENCE & AEROSPACE -->
+            <div class="industry-tile">
+              <div class="industry-tile-media">
+                <img src="/images/hero_cnc_spindle.jpg" alt="Defence Titanium Machining" class="industry-tile-img" />
+                <div class="industry-badge-float">MISSION CRITICAL</div>
+              </div>
+              <div class="industry-tile-body">
+                <h3 class="industry-tile-title">DEFENCE & AEROSPACE</h3>
+                <p class="industry-tile-summary">
+                  High-integrity structural brackets, missile guidance housings, and optical sensor mounts machined from Titanium Grade 5 and Aerospace Aluminium 7075-T6.
+                </p>
+                <div class="industry-components-list">
+                  <div class="industry-list-title">PRECISION PARTS:</div>
+                  <ul class="industry-parts-ul">
+                    <li>Missile Actuator Housings & Triggers</li>
+                    <li>Optical Gimbal Rings & Enclosures</li>
+                    <li>Aerospace Structural Brackets</li>
+                  </ul>
                 </div>
-                <div style="display: flex; align-items: center; gap: 0.75rem; font-family: var(--font-mono); font-size: 0.8rem; color: var(--text-secondary);">
-                  <span style="color: var(--accent-bronze);">✓</span> 24/7 Power Redundancy & Climate-Controlled Machining Bays
+                <div class="industry-tile-footer">
+                  <span style="font-family: var(--font-mono); font-size: 0.72rem; color: var(--text-muted);">TOL: ±0.002 MM</span>
+                  <a href="/products" class="industry-link-action nav-route" data-path="/products">
+                    <span>EXPLORE SEGMENT →</span>
+                  </a>
                 </div>
-                <div style="display: flex; align-items: center; gap: 0.75rem; font-family: var(--font-mono); font-size: 0.8rem; color: var(--text-secondary);">
-                  <span style="color: var(--accent-bronze);">✓</span> Direct Proximity to Pune Airport & Nhava Sheva (JNPT) Export Port
+              </div>
+            </div>
+
+            <!-- 04: HYDRAULICS -->
+            <div class="industry-tile">
+              <div class="industry-tile-media">
+                <img src="/images/vmc_coolant_spray.jpg" alt="Hydraulic Valve Block Machining" class="industry-tile-img" />
+                <div class="industry-badge-float">700 BAR RATED</div>
+              </div>
+              <div class="industry-tile-body">
+                <h3 class="industry-tile-title">HYDRAULICS & FLUID POWER</h3>
+                <p class="industry-tile-summary">
+                  Precision-honed spool valve bodies, integrated manifold blocks, and pump cartridges built for zero-leakage fluid modulation under hydraulic shock.
+                </p>
+                <div class="industry-components-list">
+                  <div class="industry-list-title">PRECISION PARTS:</div>
+                  <ul class="industry-parts-ul">
+                    <li>Directional Spool Valve Bodies</li>
+                    <li>Complex Multi-Port Manifold Blocks</li>
+                    <li>High-Pressure Cylinder Glands</li>
+                  </ul>
+                </div>
+                <div class="industry-tile-footer">
+                  <span style="font-family: var(--font-mono); font-size: 0.72rem; color: var(--text-muted);">CYLINDRICITY: 0.002 MM</span>
+                  <a href="/products" class="industry-link-action nav-route" data-path="/products">
+                    <span>EXPLORE SEGMENT →</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <!-- 05: TECHNICAL PLASTICS -->
+            <div class="industry-tile">
+              <div class="industry-tile-media">
+                <img src="/images/industrial_spark_cutting.jpg" alt="Technical Plastics Injection Moulding" class="industry-tile-img" />
+                <div class="industry-badge-float">25+ YRS POLYMER HERITAGE</div>
+              </div>
+              <div class="industry-tile-body">
+                <h3 class="industry-tile-title">PLASTICS MOULDING</h3>
+                <p class="industry-tile-summary">
+                  Rooted in our 1996 Raja Plastics foundation, moulding high-performance PEEK, POM (Delrin), Nylon 66 GF30, and brass-inserted sensor enclosures.
+                </p>
+                <div class="industry-components-list">
+                  <div class="industry-list-title">PRECISION PARTS:</div>
+                  <ul class="industry-parts-ul">
+                    <li>Under-the-Hood Sensor Housings</li>
+                    <li>Polymer Gears & Anti-Backlash Bushings</li>
+                    <li>Brass-Inserted Connectors & Overmoulds</li>
+                  </ul>
+                </div>
+                <div class="industry-tile-footer">
+                  <span style="font-family: var(--font-mono); font-size: 0.72rem; color: var(--text-muted);">TOL: ±0.010 MM</span>
+                  <a href="/products" class="industry-link-action nav-route" data-path="/products">
+                    <span>EXPLORE SEGMENT →</span>
+                  </a>
                 </div>
               </div>
             </div>
@@ -367,109 +441,238 @@ export function renderHomePage() {
         </div>
       </section>
 
-      <!-- 7. CERTIFICATIONS STRIP -->
-      <section class="section-py" style="background: #090B0E; border-top: 1px solid var(--steel-border); border-bottom: 1px solid var(--steel-border);">
+      <!-- 6. INFRASTRUCTURE SECTION (WHITE + DEEP BLUE PANEL #0B3A66) -->
+      <section class="section-py" style="background: #F4F7FA; border-top: 1px solid var(--border-color); border-bottom: 1px solid var(--border-color);">
         <div class="container">
-          <div style="text-align: center; max-width: 700px; margin: 0 auto 3rem auto;">
-            <div class="tech-tag" style="margin-bottom: 0.75rem;">GLOBAL COMPLIANCE</div>
-            <h2 style="font-size: 2.2rem; margin-bottom: 0.5rem;">Audited & Certified by World Leaders</h2>
-            <p style="font-size: 0.9rem; color: var(--text-muted);">Our quality management and automotive manufacturing systems are verified to international standards.</p>
-          </div>
+          <div class="infra-white-blue-wrap">
+            <!-- Left White Column: Narrative & Overview -->
+            <div class="infra-white-col">
+              <div class="tech-tag" style="margin-bottom: 1.25rem;">
+                PRECISION MANUFACTURING CAMPUS
+              </div>
+              <h2 class="infra-headline">
+                100+ MACHINES.<br />
+                <span style="color: var(--brand-blue);">ONE ENGINEERING STANDARD.</span>
+              </h2>
+              
+              <p style="font-size: 0.98rem; color: var(--text-secondary); line-height: 1.75; margin-bottom: 2rem; max-width: 540px;">
+                Strategically distributed across 80,000+ sq. ft. of climate-controlled shopfloors in Pune — featuring 5-axis turning centers, heavy horizontal boring, automated cleanroom assembly, and a Class-10,000 Zeiss metrology laboratory.
+              </p>
 
-          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1.5rem;">
-            ${COMPANY_DATA.certifications.map(cert => `
-              <div style="background: #111317; border: 1px solid var(--steel-border); padding: 1.75rem; text-align: center;">
-                <div style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--accent-bronze); font-weight: 700; margin-bottom: 0.5rem;">
-                  ${cert.badge}
+              <div style="display: flex; flex-wrap: wrap; gap: 1rem;">
+                <a href="/infrastructure" class="btn btn-primary nav-route" data-path="/infrastructure">
+                  <span>EXPLORE INFRASTRUCTURE →</span>
+                </a>
+                <button type="button" class="btn btn-secondary trigger-tour-modal">
+                  <span>BOOK A FACILITY VISIT</span>
+                </button>
+              </div>
+            </div>
+
+            <!-- Right Deep Blue Panel: Plant Specifications -->
+            <div class="infra-blue-panel">
+              <div class="infra-locations-strip">
+                <div class="infra-location-chip"><span class="marker">●</span> CHAKAN MIDC</div>
+                <div class="infra-location-chip"><span class="marker">●</span> BHOSARI MIDC</div>
+                <div class="infra-location-chip"><span class="marker">●</span> TALEGAON MIDC</div>
+                <div class="infra-location-chip"><span class="marker">●</span> PUNE BELT</div>
+              </div>
+
+              <div class="infra-plant-cards">
+                <div class="infra-plant-item">
+                  <div class="infra-plant-name">Plant 1 — Chakan MIDC (35,000 sq. ft.)</div>
+                  <div class="infra-plant-details">Heavy multi-axis CNC lathes, BT50 VMCs, Inconel machining bay, and 700-bar hydrostatic pressure proofing rig.</div>
                 </div>
-                <h3 style="font-size: 1.25rem; margin-bottom: 0.5rem;">${cert.code}</h3>
-                <p style="font-size: 0.78rem; color: var(--text-secondary); margin-bottom: 1rem;">
-                  ${cert.scope}
-                </p>
-                <div style="font-family: var(--font-mono); font-size: 0.7rem; color: var(--status-green);">
-                  ● ${cert.validity}
+
+                <div class="infra-plant-item">
+                  <div class="infra-plant-name">Plant 2 — Bhosari MIDC (25,000 sq. ft.)</div>
+                  <div class="infra-plant-details">High-volume automotive common rail injector lines, hydraulic spool micro-honing cells, and cleanroom sub-assembly.</div>
+                </div>
+
+                <div class="infra-plant-item">
+                  <div class="infra-plant-name">Plant 3 — Talegaon & Shivleela (20,000 sq. ft.)</div>
+                  <div class="infra-plant-details">Precision plastics mouldroom, EDM wire-cut division, and our pioneering women-led metrology and QA training academy.</div>
                 </div>
               </div>
-            `).join('')}
+            </div>
           </div>
         </div>
       </section>
 
-      <!-- 8. GLOBAL REACH & EXPORT MAP -->
-      <section class="section-py">
+      <!-- 7. QUALITY / CERTIFICATION SECTION (CLEAN WHITE) -->
+      <section class="section-py" style="background: #FFFFFF;">
         <div class="container">
           <div class="section-header center">
-            <div class="tech-tag">GLOBAL OEM FOOTPRINT</div>
-            <h2 class="section-title">Delivering Precision Across 4 Continents</h2>
+            <div class="tech-tag" style="margin-bottom: 0.75rem;">QUALITY ARCHITECTURE</div>
+            <h2 class="section-title">PRECISION, VERIFIED.</h2>
             <p class="section-desc">
-              From our Pune plants, Primeline Components supplies critical precision-machined assemblies to leading Tier-1 and Tier-2 OEMs worldwide.
+              Inspection and testing systems integrated directly into our manufacturing workflow. Every batch is certified with full metallurgical and 3D coordinate traceability.
             </p>
           </div>
 
-          <div style="background: #101318; border: 1px solid var(--steel-border); padding: clamp(2rem, 4vw, 3.5rem); position: relative;">
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 2rem; margin-bottom: 2rem;">
-              <div>
-                <span class="tech-tag" style="font-size: 0.65rem; margin-bottom: 0.5rem;">DOMESTIC MARKET</span>
-                <h4 style="font-size: 1.1rem; margin-bottom: 0.35rem;">India OEM Hubs</h4>
-                <p style="font-size: 0.8rem; color: var(--text-muted);">Pune, Chennai, Bengaluru, NCR, Ahmedabad, Hyderabad.</p>
+          <div class="quality-cert-grid">
+            <div class="cert-institution-card">
+              <div class="cert-badge-mark">
+                <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                </svg>
               </div>
-
-              <div>
-                <span class="tech-tag" style="font-size: 0.65rem; margin-bottom: 0.5rem;">EUROPEAN UNION</span>
-                <h4 style="font-size: 1.1rem; margin-bottom: 0.35rem;">Germany & Italy</h4>
-                <p style="font-size: 0.8rem; color: var(--text-muted);">Automotive powertrains, hydraulic valve blocks & industrial fittings.</p>
-              </div>
-
-              <div>
-                <span class="tech-tag" style="font-size: 0.65rem; margin-bottom: 0.5rem;">NORTH AMERICA</span>
-                <h4 style="font-size: 1.1rem; margin-bottom: 0.35rem;">USA & Canada</h4>
-                <p style="font-size: 0.8rem; color: var(--text-muted);">Oil & Gas API 6D valve trims, subsea manifolds & defence components.</p>
-              </div>
-
-              <div>
-                <span class="tech-tag" style="font-size: 0.65rem; margin-bottom: 0.5rem;">MIDDLE EAST & APAC</span>
-                <h4 style="font-size: 1.1rem; margin-bottom: 0.35rem;">UAE, Saudi & Singapore</h4>
-                <p style="font-size: 0.8rem; color: var(--text-muted);">Offshore valve assemblies, petrochemical piping trims & electronics.</p>
-              </div>
+              <h3 class="cert-code-title">ISO 9001:2015</h3>
+              <p class="cert-scope-text">
+                Certified Quality Management for CNC turning, VMC milling, and plastic moulded sub-assemblies.
+              </p>
+              <div class="cert-status-tag">● TUV AUSTRIA AUDITED</div>
             </div>
 
-            <div style="display: flex; justify-content: space-between; align-items: center; border-top: 1px solid var(--steel-border); padding-top: 1.5rem; flex-wrap: wrap; gap: 1rem;">
-              <div style="font-family: var(--font-mono); font-size: 0.78rem; color: var(--text-secondary);">
-                LOGISTICS: <span style="color: var(--accent-bronze);">EX-WORKS, FOB JNPT MUMBAI, CIF GLOBAL PORTS (AIR & SEA)</span>
+            <div class="cert-institution-card">
+              <div class="cert-badge-mark">
+                <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
+                  <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+                </svg>
               </div>
-              <button type="button" class="btn btn-secondary btn-sm trigger-profile-modal">
-                <span>View Export Compliance Sheet</span>
-              </button>
+              <h3 class="cert-code-title">IATF 16949</h3>
+              <p class="cert-scope-text">
+                Automotive OEM compliance for safety-critical powertrain, fuel delivery, and precision transmission parts.
+              </p>
+              <div class="cert-status-tag">● CPK ≥ 1.67 COMPLIANT</div>
+            </div>
+
+            <div class="cert-institution-card">
+              <div class="cert-badge-mark">
+                <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <line x1="2" y1="12" x2="22" y2="12"></line>
+                  <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+                </svg>
+              </div>
+              <h3 class="cert-code-title">IAF & KAB</h3>
+              <p class="cert-scope-text">
+                International Accreditation Forum recognition ensuring global validity of calibration and QA conformity.
+              </p>
+              <div class="cert-status-tag">● GLOBAL RECOGNITION</div>
+            </div>
+
+            <div class="cert-institution-card">
+              <div class="cert-badge-mark">
+                <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+                </svg>
+              </div>
+              <h3 class="cert-code-title">TUV AUSTRIA</h3>
+              <p class="cert-scope-text">
+                Rigorous European safety compliance, pressure vessel integrity proofing, and metallurgical certification.
+              </p>
+              <div class="cert-status-tag">● ACTIVE & VERIFIED</div>
+            </div>
+          </div>
+
+          <div style="text-align: center; margin-top: 3rem;">
+            <a href="/infrastructure" class="btn btn-secondary btn-lg nav-route" data-path="/infrastructure">
+              <span>EXPLORE QUALITY SYSTEM & ZEISS METROLOGY LAB →</span>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- 8. VALUE ADDITION SECTION (LIGHT BLUE BACKGROUND #E8F1F8) -->
+      <section class="section-py" style="background: var(--bg-light-blue); border-top: 1px solid var(--border-color); border-bottom: 1px solid var(--border-color);">
+        <div class="container">
+          <div class="section-header center">
+            <div class="tech-tag" style="margin-bottom: 0.75rem; background: #FFFFFF;">VALUE ADDITION</div>
+            <h2 class="section-title">INTEGRATED MANUFACTURING SERVICES</h2>
+            <p class="section-desc">
+              From early DFM engineering consultation to certified direct-to-line kitting and buffer stocking.
+            </p>
+          </div>
+
+          <div class="value-add-grid">
+            <div class="value-add-card">
+              <div class="value-add-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path>
+                </svg>
+              </div>
+              <h3 class="value-add-title">Assembly & Kitting</h3>
+              <p class="value-add-desc">Sub-assemblies tested and packed ready for direct OEM production lines.</p>
+            </div>
+
+            <div class="value-add-card">
+              <div class="value-add-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <polyline points="12 6 12 12 16 14"></polyline>
+                </svg>
+              </div>
+              <h3 class="value-add-title">JIT Delivery</h3>
+              <p class="value-add-desc">KanBan pull systems and managed inventory at our Pune facilities.</p>
+            </div>
+
+            <div class="value-add-card">
+              <div class="value-add-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M5 12h14M12 5l7 7-7 7"></path>
+                </svg>
+              </div>
+              <h3 class="value-add-title">Logistics & VCI</h3>
+              <p class="value-add-desc">Multi-layer anti-corrosion barrier packing for rust-free export transit.</p>
+            </div>
+
+            <div class="value-add-card">
+              <div class="value-add-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                  <line x1="3" y1="9" x2="21" y2="9"></line>
+                  <line x1="9" y1="21" x2="9" y2="9"></line>
+                </svg>
+              </div>
+              <h3 class="value-add-title">DFM Support</h3>
+              <p class="value-add-desc">3D CAD design review to optimize cycle times and material yields.</p>
+            </div>
+
+            <div class="value-add-card">
+              <div class="value-add-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
+                </svg>
+              </div>
+              <h3 class="value-add-title">R&D Machining</h3>
+              <p class="value-add-desc">Fast 5 to 7-day turnaround for critical first-article samples.</p>
             </div>
           </div>
         </div>
       </section>
 
-      <!-- 9. CLOSING CTA BAND -->
-      <section class="section-py" style="background: linear-gradient(180deg, #11141A 0%, #090A0D 100%); border-top: 1px solid var(--steel-border);">
-        <div class="container">
-          <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 2rem;">
-            <div>
-              <div class="tech-tag" style="margin-bottom: 0.75rem;">START TECHNICAL REVIEW</div>
-              <h2 style="font-size: clamp(2rem, 3.5vw, 2.8rem); margin-bottom: 0.5rem;">
-                Talk directly with our engineering team.
-              </h2>
-              <p style="font-size: 0.95rem; color: var(--text-secondary); max-width: 600px;">
-                Send your 2D/3D drawings for confidential DFM review and detailed commercial quotation within 24 hours.
-              </p>
-            </div>
+      <!-- 9. FINAL CTA SECTION (DEEP ENGINEERING BLUE #0B3A66) -->
+      <section class="final-cta-section">
+        <div class="final-cta-cad-lines"></div>
 
-            <div style="display: flex; flex-wrap: wrap; gap: 1rem; align-items: center;">
-              <button type="button" class="btn btn-primary btn-lg trigger-rfq-modal">
-                <span>Request a Quote</span>
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+        <div class="container">
+          <div class="final-cta-content">
+            <div class="tech-tag" style="margin-bottom: 1.25rem; background: rgba(255, 255, 255, 0.12); border-color: rgba(255, 255, 255, 0.25); color: #FFFFFF;">
+              START TECHNICAL COLLABORATION
+            </div>
+            
+            <h2 class="final-cta-headline">
+              READY TO ENGINEER<br />
+              THE NEXT COMPONENT?
+            </h2>
+
+            <p class="final-cta-desc">
+              Talk to our engineering team about your next precision manufacturing requirement. Send your 2D/3D drawings for confidential DFM review and detailed commercial quotation within 24 hours.
+            </p>
+
+            <div style="display: flex; flex-wrap: wrap; gap: 1.25rem; align-items: center;">
+              <button type="button" class="btn btn-white btn-lg trigger-rfq-modal">
+                <span>REQUEST A QUOTE</span>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
                   <line x1="7" y1="17" x2="17" y2="7"></line>
                   <polyline points="7 7 17 7 17 17"></polyline>
                 </svg>
               </button>
 
-              <a href="https://wa.me/919130303006" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-lg">
-                <span>WhatsApp / Hotline</span>
+              <a href="tel:+919130303006" class="btn btn-white-outline btn-lg">
+                <span>TALK TO OUR ENGINEERS →</span>
               </a>
             </div>
           </div>

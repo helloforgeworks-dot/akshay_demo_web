@@ -1,6 +1,7 @@
 /**
  * Primeline Components Pvt Ltd (PLC) — Master Client Application
  * Client-Side Router, Dynamic Lifecycle & Modal Controller
+ * Tier-1 Precision Engineering Architecture
  */
 
 import { renderHeader } from './components/Header.js';
@@ -9,7 +10,6 @@ import { renderRfqModal, initRfqModalEvents } from './components/RfqModal.js';
 import { renderCompanyProfileModal, initCompanyProfileModalEvents } from './components/CompanyProfileModal.js';
 import { renderJobApplyModal, initJobApplyModalEvents } from './components/JobApplyModal.js';
 import { renderFacilityTourModal, initFacilityTourModalEvents } from './components/FacilityTourModal.js';
-import { initTechnicalCanvas } from './components/TechnicalCanvas.js';
 
 import { renderHomePage } from './pages/HomePage.js';
 import { renderAboutPage } from './pages/AboutPage.js';
@@ -27,6 +27,7 @@ const routes = {
   '/capabilities': renderCapabilitiesPage,
   '/products': renderProductsPage,
   '/infrastructure': renderInfrastructurePage,
+  '/quality': renderInfrastructurePage,
   '/value-addition': renderValueAdditionPage,
   '/careers': renderCareersPage,
   '/contact': renderContactPage
@@ -63,7 +64,7 @@ function renderRoute(path) {
 
   // Page Specific Post-Mount Logic
   if (path === '/') {
-    currentCleanup = initTechnicalCanvas('hero-tech-canvas');
+    initHomePageInteractions();
   }
 
   // Initialize Animated Counters
@@ -86,6 +87,86 @@ function setupMobileNav() {
   }
 }
 
+// Capability Tab Switching for HomePage
+function initHomePageInteractions() {
+  const capRows = document.querySelectorAll('.cap-item-row');
+  const previewImg = document.getElementById('cap-preview-img');
+  const previewTitle = document.getElementById('cap-preview-title');
+  const previewDesc = document.getElementById('cap-preview-desc');
+  const previewTol = document.getElementById('cap-preview-tol');
+  const previewEquip = document.getElementById('cap-preview-equip');
+
+  if (!capRows.length || !previewImg) return;
+
+  const capData = [
+    {
+      title: "01 — Precision CNC Machining",
+      desc: "Ultra-precision turning and multi-axis machining for Inconel 718/625, SS316L, Duplex 2205, and Titanium Gr5 under stringent ±0.002 mm dimensional compliance.",
+      tol: "±0.002 mm (2 microns)",
+      equip: "5-Axis Turning Centers, Dual-Spindle CNC Lathes with Live Tooling, Swiss-Type Automatic Lathes",
+      img: "/images/hero_cnc_spindle.jpg"
+    },
+    {
+      title: "02 — Vertical Machining Centers (VMC)",
+      desc: "Equipped with high-rigidity BT-50 and high-speed BT-40 spindle configurations, our VMC division handles prismatic parts, multi-port hydraulic valve blocks, and complex defence housings.",
+      tol: "±0.005 mm (5 microns)",
+      equip: "High-Speed BT40/BT50 VMC Fleet, 4th Axis Rotary Tables, Dual Pallet Changers",
+      img: "/images/vmc_coolant_spray.jpg"
+    },
+    {
+      title: "03 — Special Processes & Surface Engineering",
+      desc: "Qualified special processing ensuring high wear resistance, anti-galling properties, corrosion immunity in aggressive offshore environments, and certified hardness gradients.",
+      tol: "Micron-level coating thickness control",
+      equip: "Automated Plating Baths, Atmosphere-Controlled Heat Treat Furnaces, Ultrasonic Degreasing Lines",
+      img: "/images/industrial_spark_cutting.jpg"
+    },
+    {
+      title: "04 — Sub-Assemblies & Precision Fabrication",
+      desc: "Delivering fully verified sub-assemblies directly to OEM assembly lines, eliminating client-side assembly overhead, testing bottlenecks, and inventory complexities.",
+      tol: "100% functional leak-rate and torque verification",
+      equip: "Torque-Controlled Assembly Benches, Cleanroom Assembly Zone, Hydrostatic Test Benches (up to 700 bar)",
+      img: "/images/precision_machined_flange.jpg"
+    },
+    {
+      title: "05 — Technical Plastics Injection Moulding",
+      desc: "Decades of polymer tooling expertise originating from our 1996 Raja Plastics foundation enable us to mould complex, dimensionally stable engineering plastic components (PEEK/POM).",
+      tol: "±0.010 mm",
+      equip: "All-Electric Precision Injection Moulding Machines (50T to 350T), Dehumidifying Dryers",
+      img: "/images/milled_metal_block.jpg"
+    },
+    {
+      title: "06 — Rapid Prototyping & R&D Machining",
+      desc: "Bridging the gap between conceptual CAD design and mass production with agile R&D machining, metallurgical consultation, and tolerance feasibility validation in 5-7 days.",
+      tol: "Direct-from-CAD pilot precision",
+      equip: "Dedicated Pilot R&D 5-Axis Machine Cells, 3D Optical Metrology Scanners",
+      img: "/images/hero_cnc_spindle.jpg"
+    }
+  ];
+
+  capRows.forEach((row, index) => {
+    const handleSelect = () => {
+      capRows.forEach(r => r.classList.remove('active'));
+      row.classList.add('active');
+
+      const data = capData[index];
+      if (!data) return;
+
+      previewImg.style.opacity = '0.4';
+      setTimeout(() => {
+        previewImg.src = data.img;
+        previewTitle.textContent = data.title;
+        previewDesc.textContent = data.desc;
+        previewTol.textContent = data.tol;
+        previewEquip.textContent = data.equip;
+        previewImg.style.opacity = '1';
+      }, 120);
+    };
+
+    row.addEventListener('mouseenter', handleSelect);
+    row.addEventListener('click', handleSelect);
+  });
+}
+
 function initNumberCounters() {
   const counters = document.querySelectorAll('.counter-number');
   if (!counters.length) return;
@@ -99,11 +180,11 @@ function initNumberCounters() {
           if (isNaN(target)) return;
 
           let current = 0;
-          const duration = 1200;
+          const duration = 1000;
           const stepTime = Math.abs(Math.floor(duration / target)) || 20;
 
           const timer = setInterval(() => {
-            current += Math.ceil(target / 40) || 1;
+            current += Math.ceil(target / 30) || 1;
             if (current >= target) {
               el.textContent = target;
               clearInterval(timer);
@@ -116,7 +197,7 @@ function initNumberCounters() {
         }
       });
     },
-    { threshold: 0.2 }
+    { threshold: 0.15 }
   );
 
   counters.forEach((c) => observer.observe(c));

@@ -8,26 +8,26 @@ export function renderFooter() {
           <!-- Col 1: Brand & Philosophy -->
           <div>
             <div class="brand-logo-wrap" style="margin-bottom: 1.25rem;">
-              <div class="brand-logo-mark">
-                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#C98A4B" stroke-width="2">
+              <div class="brand-logo-mark" style="background: rgba(255, 255, 255, 0.1); border-color: rgba(255, 255, 255, 0.2);">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#A3D2F8" stroke-width="2">
                   <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
                 </svg>
               </div>
               <div class="brand-title-group">
-                <span class="brand-name">PRIMELINE <span>COMPONENTS</span></span>
-                <span class="brand-sub">ABHANG GROUP · PUNE INDIA</span>
+                <span class="brand-name" style="color: #FFFFFF;">PRIMELINE <span style="color: #A3D2F8;">COMPONENTS</span></span>
+                <span class="brand-sub" style="color: #BED6EB;">ABHANG GROUP · PUNE INDIA</span>
               </div>
             </div>
             
-            <p style="font-size: 0.88rem; margin-bottom: 1.5rem; max-width: 380px;">
+            <p style="font-size: 0.88rem; margin-bottom: 1.5rem; max-width: 380px; color: #D1E5F7;">
               "Precision is not a claim here — it's a certification." Tier-1 precision CNC machining, VMC milling, and engineered components for critical global OEMs.
             </p>
 
             <div style="display: flex; flex-direction: column; gap: 0.6rem;">
-              <div class="tech-tag success" style="font-size: 0.68rem;">
+              <div class="tech-tag success" style="font-size: 0.68rem; background: rgba(30, 142, 62, 0.2); border-color: rgba(30, 142, 62, 0.4); color: #78E096;">
                 <span class="pulse-dot"></span> PUNE PLANTS OPERATING (3 SHIFTS / 24·7)
               </div>
-              <div class="tech-tag neutral" style="font-size: 0.68rem;">
+              <div class="tech-tag neutral" style="font-size: 0.68rem; background: rgba(255, 255, 255, 0.08); border-color: rgba(255, 255, 255, 0.15); color: #D1E5F7;">
                 MAKE IN INDIA · SERVING GLOBAL OEMS
               </div>
             </div>
@@ -62,24 +62,24 @@ export function renderFooter() {
           <!-- Col 4: Pune Plants & Contact -->
           <div>
             <div class="footer-col-title">Manufacturing Hub</div>
-            <div style="font-size: 0.84rem; color: var(--text-muted); display: flex; flex-direction: column; gap: 1rem;">
+            <div style="font-size: 0.84rem; color: #BED6EB; display: flex; flex-direction: column; gap: 1rem;">
               <div>
-                <strong style="color: var(--text-primary); display: block; font-family: var(--font-mono); font-size: 0.76rem;">CHAKAN MIDC (PLANT 1)</strong>
+                <strong style="color: #FFFFFF; display: block; font-family: var(--font-mono); font-size: 0.76rem;">CHAKAN MIDC (PLANT 1)</strong>
                 <span>Plot C-18, Phase II, Chakan Industrial Area, Pune 410501</span>
               </div>
 
               <div>
-                <strong style="color: var(--text-primary); display: block; font-family: var(--font-mono); font-size: 0.76rem;">DIRECT CONTACT</strong>
-                <a href="mailto:${COMPANY_DATA.contact.email}" style="color: var(--accent-bronze); display: block; font-family: var(--font-mono); font-size: 0.8rem;">
+                <strong style="color: #FFFFFF; display: block; font-family: var(--font-mono); font-size: 0.76rem;">DIRECT CONTACT</strong>
+                <a href="mailto:${COMPANY_DATA.contact.email}" style="color: #A3D2F8; display: block; font-family: var(--font-mono); font-size: 0.8rem;">
                   ${COMPANY_DATA.contact.email}
                 </a>
-                <span style="font-family: var(--font-mono); font-size: 0.8rem; color: var(--text-secondary); display: block;">
+                <span style="font-family: var(--font-mono); font-size: 0.8rem; color: #D1E5F7; display: block;">
                   +91 9130303006 · +91 8956462142
                 </span>
               </div>
 
               <div>
-                <button type="button" class="btn btn-outline-bronze btn-sm" id="footer-profile-btn" style="width: 100%;">
+                <button type="button" class="btn btn-white-outline btn-sm trigger-profile-modal" id="footer-profile-btn" style="width: 100%;">
                   <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                     <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
                     <polyline points="7 10 12 15 17 10"></polyline>
@@ -105,10 +105,11 @@ export function renderFooter() {
             <span>·</span>
             <span>TUV AUSTRIA</span>
             <span>·</span>
-            <span style="color: var(--accent-bronze);">PUNE, MH, INDIA</span>
+            <span style="color: #A3D2F8;">PUNE, MH, INDIA</span>
           </div>
         </div>
       </div>
     </footer>
   `;
 }
+
