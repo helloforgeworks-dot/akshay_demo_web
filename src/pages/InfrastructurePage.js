@@ -8,14 +8,14 @@ export function renderInfrastructurePage() {
       <!-- Header -->
       <section class="page-header-white">
         <div class="container">
-          <div style="max-width: 860px;">
+          <div style="max-width: 860px; width: 100%;">
             <div class="tech-tag" style="margin-bottom: 1rem;">
               <span class="pulse-dot"></span> PUNE MIDC MANUFACTURING CAMPUS
             </div>
-            <h1 style="font-size: clamp(2.4rem, 5vw, 3.8rem); margin-bottom: 1.5rem; line-height: 1.1; color: var(--text-primary);">
+            <h1 style="font-size: clamp(2.2rem, 5vw, 3.8rem); margin-bottom: 1.25rem; line-height: 1.1; color: var(--text-primary);">
               World-Class Infrastructure & <span style="color: var(--brand-blue);">Metrology Lab</span>
             </h1>
-            <p style="font-size: 1.1rem; line-height: 1.8; color: var(--text-secondary);">
+            <p style="font-size: 1.05rem; line-height: 1.75; color: var(--text-secondary);">
               Operating 80,000+ sq. ft. of climate-controlled machining halls and accredited metrology laboratories across Chakan, Bhosari, and Talegaon MIDC in Pune.
             </p>
           </div>
@@ -33,28 +33,28 @@ export function renderInfrastructurePage() {
             </p>
           </div>
 
-          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); gap: 2rem;">
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; width: 100%; box-sizing: border-box;">
             ${infra.facilities.map((fac, idx) => `
               <div class="tech-card">
-                <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 1rem;">
+                <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 1rem; flex-wrap: wrap; gap: 0.5rem;">
                   <span style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--brand-blue); font-weight: 700;">
                     UNIT 0${idx + 1}
                   </span>
                   <span class="tech-tag success" style="font-size: 0.65rem;">ACTIVE PRODUCTION</span>
                 </div>
 
-                <h3 style="font-size: 1.35rem; margin-bottom: 0.5rem; color: var(--text-primary);">${fac.name}</h3>
-                <div style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--text-muted); text-transform: uppercase; margin-bottom: 1rem;">
+                <h3 style="font-size: 1.3rem; margin-bottom: 0.4rem; color: var(--text-primary);">${fac.name}</h3>
+                <div style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--text-muted); text-transform: uppercase; margin-bottom: 0.85rem;">
                   ${fac.area}
                 </div>
 
-                <p style="font-size: 0.9rem; color: var(--text-secondary); margin-bottom: 1.25rem;">
+                <p style="font-size: 0.88rem; color: var(--text-secondary); margin-bottom: 1.15rem; line-height: 1.65;">
                   <strong>Core Specialization:</strong> ${fac.focus}
                 </p>
 
-                <div style="background: var(--bg-secondary); border: 1px solid var(--border-color); padding: 0.85rem 1rem;">
+                <div style="background: var(--bg-secondary); border: 1px solid var(--border-color); padding: 0.85rem 1rem; width: 100%; box-sizing: border-box;">
                   <div style="font-family: var(--font-mono); font-size: 0.68rem; color: var(--brand-blue); font-weight: 700; margin-bottom: 0.25rem;">DEPLOYED MACHINERY:</div>
-                  <div style="font-size: 0.82rem; color: var(--text-primary);">${fac.fleet}</div>
+                  <div style="font-size: 0.82rem; color: var(--text-primary); line-height: 1.5;">${fac.fleet}</div>
                 </div>
               </div>
             `).join('')}
@@ -83,12 +83,12 @@ export function renderInfrastructurePage() {
             </p>
           </div>
 
-          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 1.5rem;">
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.25rem; width: 100%; box-sizing: border-box;">
             ${infra.qualityLab.instruments.map(inst => `
-              <div style="background: #FFFFFF; border: 1px solid var(--border-color); padding: 1.75rem; box-shadow: 0 4px 16px rgba(11,58,102,0.04);">
+              <div style="background: #FFFFFF; border: 1px solid var(--border-color); padding: 1.5rem; box-shadow: 0 4px 16px rgba(11,58,102,0.04); box-sizing: border-box;">
                 <div class="tech-tag" style="margin-bottom: 0.75rem; font-size: 0.68rem;">${inst.metric}</div>
-                <h3 style="font-size: 1.2rem; margin-bottom: 0.5rem; color: var(--text-primary);">${inst.name}</h3>
-                <p style="font-size: 0.88rem; color: var(--text-secondary); line-height: 1.65;">
+                <h3 style="font-size: 1.2rem; margin-bottom: 0.4rem; color: var(--text-primary);">${inst.name}</h3>
+                <p style="font-size: 0.86rem; color: var(--text-secondary); line-height: 1.65;">
                   ${inst.purpose}
                 </p>
               </div>
@@ -108,14 +108,14 @@ export function renderInfrastructurePage() {
             </p>
           </div>
 
-          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1.5rem;">
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1.25rem; width: 100%; box-sizing: border-box;">
             ${infra.qaWorkflow.map(step => `
               <div class="tech-card">
-                <div style="font-family: var(--font-display); font-size: 2.2rem; font-weight: 800; color: var(--brand-blue); margin-bottom: 0.5rem;">
+                <div style="font-family: var(--font-display); font-size: 2rem; font-weight: 800; color: var(--brand-blue); margin-bottom: 0.4rem;">
                   ${step.step}
                 </div>
-                <h3 style="font-size: 1.1rem; margin-bottom: 0.5rem; color: var(--text-primary);">${step.title}</h3>
-                <p style="font-size: 0.84rem; color: var(--text-secondary); line-height: 1.7;">
+                <h3 style="font-size: 1.1rem; margin-bottom: 0.4rem; color: var(--text-primary);">${step.title}</h3>
+                <p style="font-size: 0.84rem; color: var(--text-secondary); line-height: 1.65;">
                   ${step.desc}
                 </p>
               </div>

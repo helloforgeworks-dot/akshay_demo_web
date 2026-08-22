@@ -6,14 +6,14 @@ export function renderCapabilitiesPage() {
       <!-- Header -->
       <section class="page-header-white">
         <div class="container">
-          <div style="max-width: 860px;">
+          <div style="max-width: 860px; width: 100%;">
             <div class="tech-tag" style="margin-bottom: 1rem;">
               <span class="pulse-dot"></span> INTEGRATED MACHINING FLEET · 100+ SPINDLES
             </div>
-            <h1 style="font-size: clamp(2.4rem, 5vw, 3.8rem); margin-bottom: 1.5rem; line-height: 1.1; color: var(--text-primary);">
+            <h1 style="font-size: clamp(2.2rem, 5vw, 3.8rem); margin-bottom: 1.25rem; line-height: 1.1; color: var(--text-primary);">
               Precision Engineering & <span style="color: var(--brand-blue);">Machining Capabilities</span>
             </h1>
-            <p style="font-size: 1.1rem; line-height: 1.8; color: var(--text-secondary);">
+            <p style="font-size: 1.05rem; line-height: 1.75; color: var(--text-secondary);">
               From single-setup 5-axis turning of refractory superalloys to high-speed vertical milling and multi-cavity polymer injection tooling — our capabilities deliver certified repeatability down to 2 microns.
             </p>
           </div>
@@ -23,21 +23,21 @@ export function renderCapabilitiesPage() {
       <!-- Detailed Capability Showcase -->
       <section class="section-py" style="background: #FFFFFF;">
         <div class="container">
-          <div style="display: flex; flex-direction: column; gap: clamp(3rem, 5vw, 4.5rem);">
+          <div style="display: flex; flex-direction: column; gap: clamp(2.5rem, 5vw, 4.5rem); width: 100%;">
             ${COMPANY_DATA.capabilities.map((cap, idx) => `
-              <div id="${cap.id}" style="background: var(--bg-secondary); border: 1px solid var(--border-color); padding: clamp(2rem, 4vw, 3.5rem); position: relative; box-shadow: 0 4px 20px rgba(11,58,102,0.04);">
+              <div id="${cap.id}" style="background: var(--bg-secondary); border: 1px solid var(--border-color); padding: clamp(1.25rem, 4vw, 3.5rem); position: relative; box-shadow: 0 4px 20px rgba(11,58,102,0.04); width: 100%; box-sizing: border-box;">
                 <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 1.5rem; flex-wrap: wrap; gap: 1rem;">
                   <div>
                     <span style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--brand-blue); font-weight: 700; letter-spacing: 0.12em;">
                       SECTION 0${idx + 1} // PRECISION CAPABILITY
                     </span>
-                    <h2 style="font-size: clamp(1.8rem, 3.2vw, 2.5rem); margin-top: 0.4rem; color: var(--text-primary);">${cap.title}</h2>
+                    <h2 style="font-size: clamp(1.6rem, 3.2vw, 2.5rem); margin-top: 0.4rem; color: var(--text-primary);">${cap.title}</h2>
                     <div style="font-family: var(--font-mono); font-size: 0.82rem; color: var(--text-muted); text-transform: uppercase;">
                       ${cap.tagline}
                     </div>
                   </div>
 
-                  <div style="display: flex; flex-direction: column; align-items: flex-end; gap: 0.5rem;">
+                  <div style="display: flex; flex-direction: column; align-items: flex-start; gap: 0.5rem;">
                     <span class="tech-tag success">${cap.tolerance}</span>
                     <button type="button" class="btn btn-primary btn-sm trigger-rfq-modal">
                       <span>Quote This Process</span>
@@ -45,12 +45,12 @@ export function renderCapabilitiesPage() {
                   </div>
                 </div>
 
-                <p style="font-size: 1.02rem; line-height: 1.8; color: var(--text-secondary); margin-bottom: 2rem; max-width: 960px;">
+                <p style="font-size: 1rem; line-height: 1.75; color: var(--text-secondary); margin-bottom: 1.75rem; max-width: 960px;">
                   ${cap.description}
                 </p>
 
                 <!-- Technical Parameter Matrix -->
-                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; margin-bottom: 2rem; background: #FFFFFF; padding: 1.5rem; border: 1px solid var(--border-color);">
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1.25rem; margin-bottom: 1.75rem; background: #FFFFFF; padding: 1.25rem; border: 1px solid var(--border-color); width: 100%; box-sizing: border-box;">
                   <div>
                     <div style="font-family: var(--font-mono); font-size: 0.72rem; color: var(--text-muted); margin-bottom: 0.35rem;">EQUIPMENT & CONTROLS</div>
                     <div style="font-size: 0.88rem; color: var(--text-primary); font-weight: 700;">${cap.equipment}</div>
@@ -72,9 +72,9 @@ export function renderCapabilitiesPage() {
                   <div style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--brand-blue); text-transform: uppercase; font-weight: 700; margin-bottom: 1rem;">
                     PROCESS HIGHLIGHTS & TECHNICAL SPECIFICATIONS:
                   </div>
-                  <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 0.85rem;">
+                  <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 0.75rem; width: 100%; box-sizing: border-box;">
                     ${cap.features.map(f => `
-                      <div style="display: flex; align-items: flex-start; gap: 0.75rem; font-size: 0.88rem; color: var(--text-secondary);">
+                      <div style="display: flex; align-items: flex-start; gap: 0.65rem; font-size: 0.88rem; color: var(--text-secondary);">
                         <span style="color: var(--brand-blue); font-family: var(--font-mono); font-weight: 700;">+</span>
                         <span>${f}</span>
                       </div>
@@ -98,52 +98,52 @@ export function renderCapabilitiesPage() {
             </p>
           </div>
 
-          <div style="overflow-x: auto; background: #FFFFFF; border: 1px solid var(--border-color); box-shadow: 0 4px 16px rgba(11,58,102,0.04);">
-            <table style="width: 100%; border-collapse: collapse; text-align: left; font-size: 0.88rem;">
+          <div class="table-responsive-wrapper">
+            <table style="width: 100%; min-width: 600px; border-collapse: collapse; text-align: left; font-size: 0.88rem;">
               <thead>
                 <tr style="background: var(--bg-light-blue); border-bottom: 1px solid var(--border-color); font-family: var(--font-mono); font-size: 0.75rem; color: var(--brand-blue); text-transform: uppercase;">
-                  <th style="padding: 1.25rem 1.5rem;">Machine Category</th>
-                  <th style="padding: 1.25rem 1.5rem;">Spindle / Axis Configuration</th>
-                  <th style="padding: 1.25rem 1.5rem;">Working Capacity</th>
-                  <th style="padding: 1.25rem 1.5rem;">Primary Application</th>
-                  <th style="padding: 1.25rem 1.5rem;">Plant Location</th>
+                  <th style="padding: 1rem 1.25rem;">Machine Category</th>
+                  <th style="padding: 1rem 1.25rem;">Spindle / Axis Configuration</th>
+                  <th style="padding: 1rem 1.25rem;">Working Capacity</th>
+                  <th style="padding: 1rem 1.25rem;">Primary Application</th>
+                  <th style="padding: 1rem 1.25rem;">Plant Location</th>
                 </tr>
               </thead>
               <tbody style="color: var(--text-secondary);">
                 <tr style="border-bottom: 1px solid var(--border-color-subtle);">
-                  <td style="padding: 1.25rem 1.5rem; font-weight: 700; color: var(--text-primary);">5-Axis & Dual-Spindle CNC Lathes</td>
-                  <td style="padding: 1.25rem 1.5rem; font-family: var(--font-mono);">5-Axis / Live Tooling / C-Axis</td>
-                  <td style="padding: 1.25rem 1.5rem;">Ø3mm to Ø450mm x 1200mm</td>
-                  <td style="padding: 1.25rem 1.5rem;">Inconel Valve Balls, Stem Shafts</td>
-                  <td style="padding: 1.25rem 1.5rem; color: var(--brand-blue); font-weight: 600;">Chakan MIDC</td>
+                  <td style="padding: 1rem 1.25rem; font-weight: 700; color: var(--text-primary);">5-Axis & Dual-Spindle CNC Lathes</td>
+                  <td style="padding: 1rem 1.25rem; font-family: var(--font-mono);">5-Axis / Live Tooling / C-Axis</td>
+                  <td style="padding: 1rem 1.25rem;">Ø3mm to Ø450mm x 1200mm</td>
+                  <td style="padding: 1rem 1.25rem;">Inconel Valve Balls, Stem Shafts</td>
+                  <td style="padding: 1rem 1.25rem; color: var(--brand-blue); font-weight: 600;">Chakan MIDC</td>
                 </tr>
                 <tr style="border-bottom: 1px solid var(--border-color-subtle);">
-                  <td style="padding: 1.25rem 1.5rem; font-weight: 700; color: var(--text-primary);">Heavy-Duty BT50 VMC Fleet</td>
-                  <td style="padding: 1.25rem 1.5rem; font-family: var(--font-mono);">4-Axis / 12,000 RPM Spindles</td>
-                  <td style="padding: 1.25rem 1.5rem;">X: 1200mm Y: 600mm Z: 650mm</td>
-                  <td style="padding: 1.25rem 1.5rem;">Hydraulic Manifolds, Defence Casings</td>
-                  <td style="padding: 1.25rem 1.5rem; color: var(--brand-blue); font-weight: 600;">Chakan MIDC</td>
+                  <td style="padding: 1rem 1.25rem; font-weight: 700; color: var(--text-primary);">Heavy-Duty BT50 VMC Fleet</td>
+                  <td style="padding: 1rem 1.25rem; font-family: var(--font-mono);">4-Axis / 12,000 RPM Spindles</td>
+                  <td style="padding: 1rem 1.25rem;">X: 1200mm Y: 600mm Z: 650mm</td>
+                  <td style="padding: 1rem 1.25rem;">Hydraulic Manifolds, Defence Casings</td>
+                  <td style="padding: 1rem 1.25rem; color: var(--brand-blue); font-weight: 600;">Chakan MIDC</td>
                 </tr>
                 <tr style="border-bottom: 1px solid var(--border-color-subtle);">
-                  <td style="padding: 1.25rem 1.5rem; font-weight: 700; color: var(--text-primary);">High-Speed Swiss-Type Lathes</td>
-                  <td style="padding: 1.25rem 1.5rem; font-family: var(--font-mono);">7-Axis Sliding Headstock</td>
-                  <td style="padding: 1.25rem 1.5rem;">Ø2mm to Ø32mm Micro-Parts</td>
-                  <td style="padding: 1.25rem 1.5rem;">Automotive Fuel Injectors, Sensors</td>
-                  <td style="padding: 1.25rem 1.5rem; color: var(--brand-blue); font-weight: 600;">Bhosari MIDC</td>
+                  <td style="padding: 1rem 1.25rem; font-weight: 700; color: var(--text-primary);">High-Speed Swiss-Type Lathes</td>
+                  <td style="padding: 1rem 1.25rem; font-family: var(--font-mono);">7-Axis Sliding Headstock</td>
+                  <td style="padding: 1rem 1.25rem;">Ø2mm to Ø32mm Micro-Parts</td>
+                  <td style="padding: 1rem 1.25rem;">Automotive Fuel Injectors, Sensors</td>
+                  <td style="padding: 1rem 1.25rem; color: var(--brand-blue); font-weight: 600;">Bhosari MIDC</td>
                 </tr>
                 <tr style="border-bottom: 1px solid var(--border-color-subtle);">
-                  <td style="padding: 1.25rem 1.5rem; font-weight: 700; color: var(--text-primary);">All-Electric Injection Moulding</td>
-                  <td style="padding: 1.25rem 1.5rem; font-family: var(--font-mono);">50T to 350T Clamping Force</td>
-                  <td style="padding: 1.25rem 1.5rem;">Shot Weight 5g to 1200g</td>
-                  <td style="padding: 1.25rem 1.5rem;">Engineering Polymers (PEEK/POM)</td>
-                  <td style="padding: 1.25rem 1.5rem; color: var(--brand-blue); font-weight: 600;">Talegaon MIDC</td>
+                  <td style="padding: 1rem 1.25rem; font-weight: 700; color: var(--text-primary);">All-Electric Injection Moulding</td>
+                  <td style="padding: 1rem 1.25rem; font-family: var(--font-mono);">50T to 350T Clamping Force</td>
+                  <td style="padding: 1rem 1.25rem;">Shot Weight 5g to 1200g</td>
+                  <td style="padding: 1rem 1.25rem;">Engineering Polymers (PEEK/POM)</td>
+                  <td style="padding: 1rem 1.25rem; color: var(--brand-blue); font-weight: 600;">Talegaon MIDC</td>
                 </tr>
                 <tr>
-                  <td style="padding: 1.25rem 1.5rem; font-weight: 700; color: var(--text-primary);">Hydrostatic Pressure Test Rig</td>
-                  <td style="padding: 1.25rem 1.5rem; font-family: var(--font-mono);">Automated Data-Logged Proof Rig</td>
-                  <td style="padding: 1.25rem 1.5rem;">Up to 700 Bar (10,150 PSI)</td>
-                  <td style="padding: 1.25rem 1.5rem;">API 6D Valve Trims & Sub-Assemblies</td>
-                  <td style="padding: 1.25rem 1.5rem; color: var(--brand-blue); font-weight: 600;">Chakan MIDC</td>
+                  <td style="padding: 1rem 1.25rem; font-weight: 700; color: var(--text-primary);">Hydrostatic Pressure Test Rig</td>
+                  <td style="padding: 1rem 1.25rem; font-family: var(--font-mono);">Automated Data-Logged Proof Rig</td>
+                  <td style="padding: 1rem 1.25rem;">Up to 700 Bar (10,150 PSI)</td>
+                  <td style="padding: 1rem 1.25rem;">API 6D Valve Trims & Sub-Assemblies</td>
+                  <td style="padding: 1rem 1.25rem; color: var(--brand-blue); font-weight: 600;">Chakan MIDC</td>
                 </tr>
               </tbody>
             </table>
