@@ -23,14 +23,14 @@ export function renderProductsPage() {
       <!-- Products Grid & Deep-Dives -->
       <section class="section-py" style="background: #FFFFFF;">
         <div class="container">
-          <div style="display: flex; flex-direction: column; gap: clamp(2.5rem, 5vw, 4.5rem); width: 100%;">
+          <div style="display: flex; flex-direction: column; gap: clamp(2rem, 4vw, 4rem); width: 100%;">
             ${COMPANY_DATA.productSegments.map((seg, idx) => `
-              <div id="${seg.id}" style="background: var(--bg-secondary); border: 1px solid var(--border-color); padding: clamp(1.25rem, 4vw, 3.5rem); position: relative; box-shadow: 0 4px 20px rgba(11,58,102,0.04); width: 100%; box-sizing: border-box;">
+              <div id="${seg.id}" class="product-segment-card">
                 <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 1.5rem; flex-wrap: wrap; gap: 1rem;">
                   <div>
                     <div class="tech-tag" style="margin-bottom: 0.5rem; font-size: 0.68rem; background: #FFFFFF;">${seg.badge}</div>
-                    <h2 style="font-size: clamp(1.6rem, 3.2vw, 2.5rem); color: var(--text-primary);">${seg.title}</h2>
-                    <div style="font-family: var(--font-mono); font-size: 0.8rem; color: var(--text-muted); text-transform: uppercase;">
+                    <h2 style="font-size: clamp(1.5rem, 3.2vw, 2.4rem); color: var(--text-primary); margin-top: 0.35rem;">${seg.title}</h2>
+                    <div style="font-family: var(--font-mono); font-size: 0.78rem; color: var(--text-muted); text-transform: uppercase;">
                       CRITICAL SECTOR 0${idx + 1}
                     </div>
                   </div>
@@ -43,29 +43,29 @@ export function renderProductsPage() {
                   </div>
                 </div>
 
-                <p style="font-size: 1.02rem; line-height: 1.75; color: var(--text-secondary); margin-bottom: 1.75rem; max-width: 980px;">
+                <p style="font-size: 0.98rem; line-height: 1.72; color: var(--text-secondary); margin-bottom: 1.5rem; max-width: 980px;">
                   ${seg.summary}
                 </p>
 
-                <!-- 2-Column Technical Layout: Component List & Quality Specs -->
-                <div class="two-col-tech-layout">
+                <!-- 2-Column Responsive Technical Layout -->
+                <div class="product-details-grid">
                   <!-- Manufactured Components -->
-                  <div style="background: #FFFFFF; border: 1px solid var(--border-color); padding: 1.5rem; box-sizing: border-box;">
+                  <div class="product-inner-card">
                     <div style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--brand-blue); text-transform: uppercase; font-weight: 700; margin-bottom: 1rem;">
                       KEY MANUFACTURED COMPONENTS & ASSEMBLIES:
                     </div>
                     <ul style="list-style: none; display: flex; flex-direction: column; gap: 0.75rem;">
                       ${seg.parts.map(part => `
-                        <li style="display: flex; align-items: flex-start; gap: 0.65rem; font-size: 0.88rem; color: var(--text-primary);">
-                          <span style="color: var(--brand-blue); font-family: var(--font-mono); font-weight: 700;">▸</span>
-                          <span>${part}</span>
+                        <li class="product-part-item">
+                          <span style="color: var(--brand-blue); font-family: var(--font-mono); font-weight: 700; flex-shrink: 0;">▸</span>
+                          <span class="product-part-text">${part}</span>
                         </li>
                       `).join('')}
                     </ul>
                   </div>
 
                   <!-- Technical Specs & Metallurgy -->
-                  <div style="background: #FFFFFF; border: 1px solid var(--border-color); padding: 1.5rem; display: flex; flex-direction: column; justify-content: space-between; box-sizing: border-box;">
+                  <div class="product-inner-card" style="display: flex; flex-direction: column; justify-content: space-between;">
                     <div>
                       <div style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--brand-blue); text-transform: uppercase; font-weight: 700; margin-bottom: 1rem;">
                         METALLURGY & QUALITY CONTROLS:

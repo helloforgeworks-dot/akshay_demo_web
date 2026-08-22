@@ -23,16 +23,16 @@ export function renderCapabilitiesPage() {
       <!-- Detailed Capability Showcase -->
       <section class="section-py" style="background: #FFFFFF;">
         <div class="container">
-          <div style="display: flex; flex-direction: column; gap: clamp(2.5rem, 5vw, 4.5rem); width: 100%;">
+          <div style="display: flex; flex-direction: column; gap: clamp(2rem, 4vw, 4rem); width: 100%;">
             ${COMPANY_DATA.capabilities.map((cap, idx) => `
-              <div id="${cap.id}" style="background: var(--bg-secondary); border: 1px solid var(--border-color); padding: clamp(1.25rem, 4vw, 3.5rem); position: relative; box-shadow: 0 4px 20px rgba(11,58,102,0.04); width: 100%; box-sizing: border-box;">
+              <div id="${cap.id}" class="product-segment-card">
                 <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 1.5rem; flex-wrap: wrap; gap: 1rem;">
                   <div>
                     <span style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--brand-blue); font-weight: 700; letter-spacing: 0.12em;">
                       SECTION 0${idx + 1} // PRECISION CAPABILITY
                     </span>
-                    <h2 style="font-size: clamp(1.6rem, 3.2vw, 2.5rem); margin-top: 0.4rem; color: var(--text-primary);">${cap.title}</h2>
-                    <div style="font-family: var(--font-mono); font-size: 0.82rem; color: var(--text-muted); text-transform: uppercase;">
+                    <h2 style="font-size: clamp(1.5rem, 3.2vw, 2.4rem); margin-top: 0.35rem; color: var(--text-primary);">${cap.title}</h2>
+                    <div style="font-family: var(--font-mono); font-size: 0.78rem; color: var(--text-muted); text-transform: uppercase;">
                       ${cap.tagline}
                     </div>
                   </div>
@@ -45,38 +45,33 @@ export function renderCapabilitiesPage() {
                   </div>
                 </div>
 
-                <p style="font-size: 1rem; line-height: 1.75; color: var(--text-secondary); margin-bottom: 1.75rem; max-width: 960px;">
+                <p style="font-size: 0.98rem; line-height: 1.72; color: var(--text-secondary); margin-bottom: 1.5rem; max-width: 960px;">
                   ${cap.description}
                 </p>
 
                 <!-- Technical Parameter Matrix -->
-                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1.25rem; margin-bottom: 1.75rem; background: #FFFFFF; padding: 1.25rem; border: 1px solid var(--border-color); width: 100%; box-sizing: border-box;">
-                  <div>
+                <div class="product-details-grid" style="margin-bottom: 1.5rem;">
+                  <div class="product-inner-card">
                     <div style="font-family: var(--font-mono); font-size: 0.72rem; color: var(--text-muted); margin-bottom: 0.35rem;">EQUIPMENT & CONTROLS</div>
                     <div style="font-size: 0.88rem; color: var(--text-primary); font-weight: 700;">${cap.equipment}</div>
                   </div>
 
-                  <div>
+                  <div class="product-inner-card">
                     <div style="font-family: var(--font-mono); font-size: 0.72rem; color: var(--text-muted); margin-bottom: 0.35rem;">MATERIALS HANDLED</div>
                     <div style="font-size: 0.88rem; color: var(--brand-blue); font-weight: 700;">${cap.materials}</div>
-                  </div>
-
-                  <div>
-                    <div style="font-family: var(--font-mono); font-size: 0.72rem; color: var(--text-muted); margin-bottom: 0.35rem;">QUALITY TOLERANCE</div>
-                    <div style="font-size: 0.88rem; color: var(--status-green); font-weight: 700;">${cap.tolerance}</div>
                   </div>
                 </div>
 
                 <!-- Feature Bullet Points -->
-                <div>
-                  <div style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--brand-blue); text-transform: uppercase; font-weight: 700; margin-bottom: 1rem;">
+                <div class="product-inner-card">
+                  <div style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--brand-blue); text-transform: uppercase; font-weight: 700; margin-bottom: 0.85rem;">
                     PROCESS HIGHLIGHTS & TECHNICAL SPECIFICATIONS:
                   </div>
-                  <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 0.75rem; width: 100%; box-sizing: border-box;">
+                  <div style="display: flex; flex-direction: column; gap: 0.65rem; width: 100%;">
                     ${cap.features.map(f => `
-                      <div style="display: flex; align-items: flex-start; gap: 0.65rem; font-size: 0.88rem; color: var(--text-secondary);">
-                        <span style="color: var(--brand-blue); font-family: var(--font-mono); font-weight: 700;">+</span>
-                        <span>${f}</span>
+                      <div class="product-part-item">
+                        <span style="color: var(--brand-blue); font-family: var(--font-mono); font-weight: 700; flex-shrink: 0;">+</span>
+                        <span class="product-part-text">${f}</span>
                       </div>
                     `).join('')}
                   </div>

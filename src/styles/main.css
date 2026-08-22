@@ -55,11 +55,12 @@
   --transition-slow: 500ms cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-/* Reset & Base Setup */
+/* Reset & Absolute Anti-Overflow System */
 *, *::before, *::after {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  min-width: 0;
 }
 
 html {
@@ -93,7 +94,7 @@ img, svg, video, canvas {
   display: block;
 }
 
-/* Typography Hierarchy */
+/* Typography Hierarchy with Safe Word Wrapping */
 h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-display);
   font-weight: 700;
@@ -104,12 +105,15 @@ h1, h2, h3, h4, h5, h6 {
   word-wrap: break-word;
 }
 
+p, span, li, td, th, div, a {
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+}
+
 p {
   color: var(--text-secondary);
   font-weight: 400;
   line-height: 1.7;
-  overflow-wrap: break-word;
-  word-wrap: break-word;
 }
 
 a {
@@ -171,6 +175,7 @@ button, input, select, textarea {
   transition: all var(--transition-smooth);
   box-sizing: border-box;
   width: 100%;
+  max-width: 100%;
 }
 
 .tech-card:hover {
@@ -249,6 +254,7 @@ button, input, select, textarea {
   user-select: none;
   white-space: nowrap;
   box-sizing: border-box;
+  max-width: 100%;
 }
 
 .btn-primary {
@@ -342,6 +348,7 @@ button, input, select, textarea {
   height: 100%;
   gap: 1rem;
   box-sizing: border-box;
+  width: 100%;
 }
 
 .brand-logo-wrap {
@@ -1530,8 +1537,66 @@ button, input, select, textarea {
 }
 
 /* ==========================================================================
-   TIMELINE, EXECUTIVE MESSAGE & GOVERNANCE COMPONENT CLASSES
+   COMPONENT CARD & GRID ARCHITECTURE
    ========================================================================== */
+.product-segment-card {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  padding: clamp(1.25rem, 3.5vw, 3rem);
+  position: relative;
+  box-shadow: 0 4px 20px rgba(11, 58, 102, 0.04);
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+.product-details-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 1.75rem;
+  margin-bottom: 1.5rem;
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+.product-inner-card {
+  background: #FFFFFF;
+  border: 1px solid var(--border-color);
+  padding: clamp(1rem, 2.5vw, 1.5rem);
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+.product-part-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.65rem;
+  font-size: 0.88rem;
+  color: var(--text-primary);
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+.product-part-text {
+  flex: 1;
+  min-width: 0;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+}
+
+.two-col-tech-layout {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 2rem;
+  margin-bottom: 2rem;
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
 .timeline-container {
   position: relative;
   display: flex;
@@ -1548,6 +1613,7 @@ button, input, select, textarea {
 .timeline-item {
   position: relative;
   width: 100%;
+  max-width: 100%;
   box-sizing: border-box;
 }
 
@@ -1570,6 +1636,7 @@ button, input, select, textarea {
   padding: clamp(1.25rem, 3vw, 2rem);
   border-radius: var(--border-radius-sm);
   width: 100%;
+  max-width: 100%;
   box-sizing: border-box;
 }
 
@@ -1579,6 +1646,7 @@ button, input, select, textarea {
   gap: clamp(2rem, 5vw, 4.5rem);
   align-items: center;
   width: 100%;
+  max-width: 100%;
   box-sizing: border-box;
 }
 
@@ -1587,6 +1655,7 @@ button, input, select, textarea {
   grid-template-columns: repeat(3, 1fr);
   gap: 1.5rem;
   width: 100%;
+  max-width: 100%;
   box-sizing: border-box;
 }
 
@@ -1596,15 +1665,7 @@ button, input, select, textarea {
   gap: clamp(2rem, 5vw, 4.5rem);
   align-items: center;
   width: 100%;
-  box-sizing: border-box;
-}
-
-.two-col-tech-layout {
-  display: grid;
-  grid-template-columns: 1.2fr 1fr;
-  gap: 2rem;
-  margin-bottom: 2rem;
-  width: 100%;
+  max-width: 100%;
   box-sizing: border-box;
 }
 
@@ -1613,6 +1674,7 @@ button, input, select, textarea {
   grid-template-columns: 1.2fr 1fr;
   gap: clamp(2rem, 4vw, 4.5rem);
   width: 100%;
+  max-width: 100%;
   box-sizing: border-box;
 }
 
@@ -1620,6 +1682,7 @@ button, input, select, textarea {
   overflow-x: auto;
   -webkit-overflow-scrolling: touch;
   width: 100%;
+  max-width: 100%;
   border: 1px solid var(--border-color);
   background: #FFFFFF;
   box-sizing: border-box;
@@ -1924,7 +1987,10 @@ button, input, select, textarea {
     gap: 2.5rem;
   }
 
-  .two-col-tech-layout {
+  .two-col-tech-layout,
+  .product-details-grid {
+    display: flex;
+    flex-direction: column;
     grid-template-columns: 1fr;
     gap: 1.5rem;
   }
@@ -1956,7 +2022,7 @@ button, input, select, textarea {
     max-width: 100%;
   }
 
-  /* Header Mobile Redesign: Logo on left, Hamburger on right, Hide header quote button */
+  /* Header Mobile Redesign */
   .header-inner {
     gap: 0.5rem;
   }
@@ -1991,7 +2057,6 @@ button, input, select, textarea {
     text-overflow: ellipsis;
   }
 
-  /* Hide header CTA on mobile to give full room to logo and hamburger */
   .header-actions #header-rfq-trigger {
     display: none;
   }
@@ -2029,8 +2094,6 @@ button, input, select, textarea {
     font-size: clamp(1.85rem, 8vw, 2.75rem);
     line-height: 1.1;
     margin-bottom: 1rem;
-    word-break: normal;
-    overflow-wrap: break-word;
   }
 
   .hero-description {
@@ -2040,7 +2103,6 @@ button, input, select, textarea {
     margin-bottom: 1.5rem;
   }
 
-  /* Refined Full-Width Mobile CTA Buttons */
   .hero-cta-group {
     display: flex;
     flex-direction: column;
@@ -2058,7 +2120,6 @@ button, input, select, textarea {
     justify-content: center;
   }
 
-  /* Hero Specification Card */
   .hero-meta-strip {
     display: flex;
     flex-direction: column;
@@ -2077,7 +2138,6 @@ button, input, select, textarea {
     word-break: break-word;
   }
 
-  /* Hero Media Section */
   .hero-media-frame {
     padding: 0.4rem;
     margin-top: 1rem;
@@ -2216,6 +2276,25 @@ button, input, select, textarea {
     font-size: 0.95rem;
   }
 
+  /* Products & Subpages Mobile Overhaul */
+  .product-segment-card {
+    padding: 1.25rem 1rem;
+  }
+
+  .product-details-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+  }
+
+  .product-inner-card {
+    padding: 1.15rem 1rem;
+  }
+
+  .product-part-item {
+    font-size: 0.84rem;
+  }
+
   /* Quality & Value Addition Mobile */
   .quality-cert-grid {
     grid-template-columns: 1fr;
@@ -2339,5 +2418,13 @@ button, input, select, textarea {
 
   .intro-statement {
     font-size: 1.4rem;
+  }
+
+  .product-segment-card {
+    padding: 1rem 0.75rem;
+  }
+
+  .product-inner-card {
+    padding: 0.85rem 0.75rem;
   }
 }
