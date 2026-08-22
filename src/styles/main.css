@@ -100,12 +100,16 @@ h1, h2, h3, h4, h5, h6 {
   line-height: 1.15;
   color: var(--text-primary);
   letter-spacing: -0.02em;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
 }
 
 p {
   color: var(--text-secondary);
   font-weight: 400;
   line-height: 1.7;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
 }
 
 a {
@@ -120,7 +124,7 @@ button, input, select, textarea {
   color: inherit;
 }
 
-/* Containers & Section Layouts */
+/* Utility Containers & Grids */
 .container {
   width: 100%;
   max-width: var(--container-max);
@@ -310,7 +314,7 @@ button, input, select, textarea {
   font-size: 0.82rem;
 }
 
-/* Header & Sticky Navigation (Clean Pure White) */
+/* Header & Sticky Navigation */
 .site-header {
   position: sticky;
   top: 0;
@@ -343,7 +347,7 @@ button, input, select, textarea {
 .brand-logo-wrap {
   display: flex;
   align-items: center;
-  gap: 0.85rem;
+  gap: 0.75rem;
   flex-shrink: 1;
   min-width: 0;
 }
@@ -633,6 +637,7 @@ button, input, select, textarea {
   gap: 1rem;
   align-items: center;
   margin-bottom: 1.75rem;
+  width: 100%;
 }
 
 .hero-meta-strip {
@@ -1941,7 +1946,7 @@ button, input, select, textarea {
 /* Mobile Devices (320px–767px) */
 @media (max-width: 767px) {
   :root {
-    --header-height: 68px;
+    --header-height: 64px;
   }
 
   .container {
@@ -1951,9 +1956,14 @@ button, input, select, textarea {
     max-width: 100%;
   }
 
-  /* Header Mobile Tweaks */
-  .brand-logo-wrap {
+  /* Header Mobile Redesign: Logo on left, Hamburger on right, Hide header quote button */
+  .header-inner {
     gap: 0.5rem;
+  }
+
+  .brand-logo-wrap {
+    gap: 0.6rem;
+    max-width: calc(100% - 50px);
   }
 
   .brand-logo-mark {
@@ -1967,72 +1977,123 @@ button, input, select, textarea {
   }
 
   .brand-name {
-    font-size: 0.92rem;
+    font-size: 0.95rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
 
   .brand-sub {
+    font-size: 0.55rem;
+    letter-spacing: 0.1em;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  /* Hide header CTA on mobile to give full room to logo and hamburger */
+  .header-actions #header-rfq-trigger {
     display: none;
   }
 
   .header-actions {
-    gap: 0.45rem;
-  }
-
-  .header-actions .btn-sm {
-    padding: 0.45rem 0.75rem;
-    font-size: 0.68rem;
-    letter-spacing: 0.05em;
+    margin-left: auto;
   }
 
   .mobile-toggle {
-    width: 34px;
-    height: 34px;
+    width: 38px;
+    height: 38px;
   }
 
-  /* Hero Mobile Layout */
+  /* Hero Section Mobile System */
+  .hero-white-blue {
+    padding-top: 2rem;
+    padding-bottom: 2.5rem;
+  }
+
+  .hero-eyebrow {
+    margin-bottom: 0.85rem;
+  }
+
+  .hero-eyebrow-top {
+    font-size: 0.7rem;
+    letter-spacing: 0.14em;
+  }
+
+  .hero-eyebrow-sub {
+    font-size: 0.68rem;
+    letter-spacing: 0.1em;
+  }
+
   .hero-headline {
-    font-size: clamp(2rem, 8.5vw, 3rem);
+    font-size: clamp(1.85rem, 8vw, 2.75rem);
     line-height: 1.1;
+    margin-bottom: 1rem;
+    word-break: normal;
+    overflow-wrap: break-word;
   }
 
   .hero-description {
-    font-size: 0.95rem;
+    font-size: 0.94rem;
+    line-height: 1.62;
     max-width: 100%;
-    line-height: 1.65;
+    margin-bottom: 1.5rem;
   }
 
+  /* Refined Full-Width Mobile CTA Buttons */
   .hero-cta-group {
+    display: flex;
     flex-direction: column;
+    gap: 0.75rem;
     width: 100%;
+    margin-bottom: 1.5rem;
   }
 
   .hero-cta-group .btn {
     width: 100%;
+    min-height: 52px;
+    padding: 0.85rem 1.25rem;
+    font-size: 0.76rem;
+    letter-spacing: 0.08em;
+    justify-content: center;
   }
 
+  /* Hero Specification Card */
   .hero-meta-strip {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    gap: 0.5rem;
+    gap: 0.6rem;
     width: 100%;
-    padding: 0.85rem 1rem;
+    padding: 1rem 1.15rem;
+    background: var(--bg-light-blue);
+    border: 1px solid rgba(11, 58, 102, 0.15);
+    box-sizing: border-box;
   }
 
   .hero-meta-item {
-    font-size: 0.7rem;
+    font-size: 0.74rem;
     white-space: normal;
+    word-break: break-word;
+  }
+
+  /* Hero Media Section */
+  .hero-media-frame {
+    padding: 0.4rem;
+    margin-top: 1rem;
   }
 
   .hero-media-img {
-    height: 260px;
+    height: 240px;
   }
 
   .hero-media-caption {
+    position: static;
+    margin-top: 0.4rem;
+    padding: 0.75rem 0.85rem;
     flex-direction: column;
     align-items: flex-start;
-    gap: 0.4rem;
-    padding: 0.75rem 1rem;
+    gap: 0.35rem;
   }
 
   /* Data Strip Mobile */
@@ -2043,7 +2104,7 @@ button, input, select, textarea {
   .data-strip-item {
     border-right: none;
     border-bottom: 1px solid var(--border-color);
-    padding: 1.5rem 1.25rem;
+    padding: 1.35rem 1.25rem;
   }
 
   .data-strip-item:last-child {
@@ -2051,41 +2112,68 @@ button, input, select, textarea {
   }
 
   .data-strip-val {
-    font-size: 2.2rem;
+    font-size: 2.1rem;
   }
 
   /* Introduction Mobile */
   .intro-statement {
-    font-size: clamp(1.6rem, 6.5vw, 2.2rem);
+    font-size: clamp(1.55rem, 6.5vw, 2.1rem);
+    margin-bottom: 1rem;
+  }
+
+  .intro-narrative {
+    font-size: 0.94rem;
+    line-height: 1.7;
+    margin-bottom: 1rem;
+  }
+
+  .intro-narrative-sub {
+    font-size: 0.88rem;
+    line-height: 1.65;
+    margin-bottom: 1.5rem;
   }
 
   .intro-spec-pills {
     grid-template-columns: 1fr;
-    gap: 0.85rem;
+    gap: 0.75rem;
+  }
+
+  .intro-pill {
+    padding: 1rem;
+  }
+
+  .intro-pill-val {
+    font-size: 1.25rem;
   }
 
   .intro-photo-img {
-    height: 260px;
+    height: 240px;
   }
 
   /* Capabilities Mobile */
   .cap-item-row {
-    padding: 1rem 1.15rem;
+    padding: 0.9rem 1rem;
     flex-wrap: wrap;
-    gap: 0.4rem;
+    gap: 0.35rem;
+  }
+
+  .cap-title-text {
+    font-size: 0.95rem;
   }
 
   .cap-preview-stage {
-    padding: 1.25rem;
+    padding: 1.25rem 1rem;
   }
 
   .cap-preview-img-frame {
     height: 180px;
+    margin-bottom: 1rem;
   }
 
   /* Industries Mobile */
   .industry-grid {
     grid-template-columns: 1fr;
+    gap: 1.25rem;
   }
 
   .industry-tile-media {
@@ -2093,81 +2181,104 @@ button, input, select, textarea {
   }
 
   .industry-tile-body {
-    padding: 1.35rem 1.15rem;
+    padding: 1.25rem 1rem;
+  }
+
+  .industry-tile-title {
+    font-size: 1.15rem;
   }
 
   /* Infrastructure Mobile */
   .infra-white-col {
-    padding: 2rem 1.25rem;
+    padding: 1.75rem 1.25rem;
   }
 
   .infra-blue-panel {
-    padding: 2rem 1.25rem;
+    padding: 1.75rem 1.25rem;
   }
 
   .infra-locations-strip {
-    gap: 0.75rem;
+    gap: 0.65rem;
     font-size: 0.7rem;
+    margin-bottom: 1.25rem;
+    padding-bottom: 1rem;
   }
 
   .infra-headline {
-    font-size: clamp(1.6rem, 6.5vw, 2.2rem);
+    font-size: clamp(1.55rem, 6.5vw, 2.1rem);
+  }
+
+  .infra-plant-item {
+    padding: 1rem;
+  }
+
+  .infra-plant-name {
+    font-size: 0.95rem;
   }
 
   /* Quality & Value Addition Mobile */
   .quality-cert-grid {
     grid-template-columns: 1fr;
+    gap: 1rem;
   }
 
   .cert-institution-card {
-    padding: 1.75rem 1.25rem;
+    padding: 1.5rem 1rem;
   }
 
   .value-add-grid {
     grid-template-columns: 1fr;
+    gap: 1rem;
   }
 
   .value-add-card {
-    padding: 1.35rem 1.15rem;
+    padding: 1.25rem 1rem;
   }
 
   /* Final CTA Mobile */
   .final-cta-headline {
-    font-size: clamp(1.8rem, 7.5vw, 2.6rem);
+    font-size: clamp(1.75rem, 7.5vw, 2.5rem);
+  }
+
+  .final-cta-desc {
+    font-size: 0.94rem;
+    line-height: 1.65;
+    margin-bottom: 1.5rem;
   }
 
   .final-cta-section .btn {
     width: 100%;
+    min-height: 52px;
   }
 
   /* Footer Mobile */
   .footer-grid {
     grid-template-columns: 1fr;
-    gap: 2rem;
+    gap: 1.75rem;
   }
 
   .footer-bottom-inner {
     flex-direction: column;
-    gap: 1rem;
+    gap: 0.85rem;
     text-align: center;
   }
 
   /* Timeline Mobile Fix */
   .timeline-container {
-    padding-left: 1.5rem;
+    padding-left: 1.25rem;
     margin: 0;
     width: 100%;
   }
 
   .timeline-dot {
-    left: calc(-1.5rem - 7px);
+    left: calc(-1.25rem - 7px);
     top: 1.25rem;
     width: 14px;
     height: 14px;
   }
 
   .timeline-card {
-    padding: 1.25rem 1rem;
+    padding: 1.15rem 1rem;
   }
 
   /* Governance Mobile Fix */
@@ -2179,25 +2290,26 @@ button, input, select, textarea {
   /* Executive Message Mobile Fix */
   .exec-message-grid {
     grid-template-columns: 1fr;
-    gap: 2rem;
+    gap: 1.75rem;
   }
 
   /* Modals Mobile */
   .modal-box {
-    max-width: 95vw;
-    margin: 0;
+    max-width: calc(100vw - 1.5rem);
+    margin: 0.75rem auto;
+    max-height: 92vh;
   }
 
   .modal-header {
-    padding: 1rem 1.25rem;
+    padding: 1rem 1.15rem;
   }
 
   .modal-body {
-    padding: 1.25rem 1rem;
+    padding: 1.15rem 1rem;
   }
 
   .wizard-steps {
-    margin-bottom: 1.5rem;
+    margin-bottom: 1.25rem;
   }
 
   .step-title {
@@ -2208,24 +2320,24 @@ button, input, select, textarea {
 /* Extra Small Mobile (320px–380px) */
 @media (max-width: 380px) {
   .container {
-    padding-left: 0.9rem;
-    padding-right: 0.9rem;
+    padding-left: 0.85rem;
+    padding-right: 0.85rem;
   }
 
   .brand-name {
-    font-size: 0.82rem;
+    font-size: 0.85rem;
   }
 
-  .header-actions .btn-sm {
-    padding: 0.4rem 0.6rem;
-    font-size: 0.62rem;
+  .brand-logo-mark {
+    width: 28px;
+    height: 28px;
   }
 
   .hero-headline {
-    font-size: 1.75rem;
+    font-size: 1.65rem;
   }
 
   .intro-statement {
-    font-size: 1.45rem;
+    font-size: 1.4rem;
   }
 }
