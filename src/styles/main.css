@@ -243,17 +243,28 @@ button, input, select, textarea {
   font-family: var(--font-mono);
   font-size: 0.78rem;
   font-weight: 600;
-  letter-spacing: 0.1em;
+  letter-spacing: 0.06em;
   text-transform: uppercase;
-  padding: 0.85rem 1.75rem;
+  padding: 0.85rem 1.5rem;
   border-radius: var(--border-radius-sm);
   cursor: pointer;
   position: relative;
   transition: all var(--transition-smooth);
   border: 1px solid transparent;
   user-select: none;
-  white-space: nowrap;
+  white-space: normal;
+  text-align: center;
+  line-height: 1.35;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
   box-sizing: border-box;
+  max-width: 100%;
+}
+
+.btn span {
+  display: inline;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
   max-width: 100%;
 }
 
@@ -2323,6 +2334,25 @@ button, input, select, textarea {
     font-size: 0.94rem;
     line-height: 1.65;
     margin-bottom: 1.5rem;
+  }
+
+  .btn {
+    white-space: normal !important;
+    text-align: center;
+    line-height: 1.35;
+    padding: 0.75rem 1rem;
+    font-size: 0.74rem;
+    letter-spacing: 0.05em;
+  }
+
+  .btn-sm {
+    padding: 0.55rem 0.85rem;
+    font-size: 0.7rem;
+  }
+
+  .btn-lg {
+    padding: 0.85rem 1.25rem;
+    font-size: 0.78rem;
   }
 
   .final-cta-section .btn {

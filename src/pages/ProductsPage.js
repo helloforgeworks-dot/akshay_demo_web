@@ -88,7 +88,7 @@ export function renderProductsPage() {
 
                     <div style="margin-top: 1.5rem; padding-top: 1rem; border-top: 1px solid var(--border-color);">
                       <button type="button" class="btn btn-secondary btn-sm trigger-rfq-modal" style="width: 100%;">
-                        <span>Upload Drawings for ${seg.title}</span>
+                        <span>Upload Drawings for CAD Quote</span>
                       </button>
                     </div>
                   </div>

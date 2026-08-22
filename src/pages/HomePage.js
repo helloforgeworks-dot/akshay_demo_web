@@ -569,7 +569,7 @@ export function renderHomePage() {
 
           <div style="text-align: center; margin-top: 3rem;">
             <a href="/infrastructure" class="btn btn-secondary btn-lg nav-route" data-path="/infrastructure">
-              <span>EXPLORE QUALITY SYSTEM & ZEISS METROLOGY LAB →</span>
+              <span>EXPLORE QUALITY & METROLOGY LAB →</span>
             </a>
           </div>
         </div>
