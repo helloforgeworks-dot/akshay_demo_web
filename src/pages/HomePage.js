@@ -13,7 +13,7 @@ export function renderHomePage() {
             <div>
               <!-- Eyebrow -->
               <div class="hero-eyebrow">
-                <span class="hero-eyebrow-top">PUNE, INDIA</span>
+                <span class="hero-eyebrow-top">NOIDA, UP, INDIA</span>
                 <span class="hero-eyebrow-sub">PRECISION ENGINEERING / CNC MANUFACTURING</span>
               </div>
 
@@ -64,7 +64,7 @@ export function renderHomePage() {
               <div class="hero-media-frame">
                 <img 
                   src="/images/hero_cnc_spindle.jpg" 
-                  alt="Primeline Components Multi-Axis Precision CNC Machining Spindle Pune" 
+                  alt="Forgeworks Components Multi-Axis Precision CNC Machining Spindle Noida" 
                   class="hero-media-img"
                 />
                 <div class="hero-media-caption">
@@ -73,7 +73,7 @@ export function renderHomePage() {
                       MULTI-AXIS PRECISION MACHINING
                     </div>
                     <div style="font-size: 0.72rem; color: var(--text-secondary);">
-                      CHAKAN & BHOSARI MIDC PLANTS · PUNE, INDIA
+                      SECTOR 16 & NCR PLANTS · NOIDA, UP, INDIA
                     </div>
                   </div>
                   <div style="font-family: var(--font-mono); font-size: 0.7rem; font-weight: 700; color: var(--status-green);">
@@ -95,7 +95,7 @@ export function renderHomePage() {
                 <span class="counter-number" data-target="25">25</span><span>+</span>
               </div>
               <div class="data-strip-label">YEARS GROUP EXPERIENCE</div>
-              <div class="data-strip-sub">Abhang Group Foundation Since 1996</div>
+              <div class="data-strip-sub">Forgeworks Group Foundation Since 1996</div>
             </div>
 
             <div class="data-strip-item">
@@ -103,7 +103,7 @@ export function renderHomePage() {
                 <span class="counter-number" data-target="100">100</span><span>+</span>
               </div>
               <div class="data-strip-label">ADVANCED MACHINES</div>
-              <div class="data-strip-sub">Multi-Axis CNC & VMC Fleets in Pune</div>
+              <div class="data-strip-sub">Multi-Axis CNC & VMC Fleets in Noida & NCR</div>
             </div>
 
             <div class="data-strip-item">
@@ -141,7 +141,7 @@ export function renderHomePage() {
               </h2>
               
               <p class="intro-narrative">
-                Primeline Components combines precision machining, advanced manufacturing infrastructure and disciplined quality systems to deliver critical components for demanding OEM applications.
+                Forgeworks Components combines precision machining, advanced manufacturing infrastructure and disciplined quality systems to deliver critical components for demanding OEM applications.
               </p>
               
               <p class="intro-narrative-sub">
@@ -168,7 +168,7 @@ export function renderHomePage() {
               <div class="intro-photo-frame">
                 <img 
                   src="/images/precision_machined_flange.jpg" 
-                  alt="Precision Machined High Pressure Flange Component Primeline Pune" 
+                  alt="Precision Machined High Pressure Flange Component Forgeworks Noida" 
                   class="intro-photo-img"
                 />
                 <div style="padding: 1.25rem; display: flex; justify-content: space-between; align-items: center; background: #FFFFFF; border-top: 1px solid var(--border-color);">
@@ -456,7 +456,7 @@ export function renderHomePage() {
               </h2>
               
               <p style="font-size: 0.98rem; color: var(--text-secondary); line-height: 1.75; margin-bottom: 2rem; max-width: 540px;">
-                Strategically distributed across 80,000+ sq. ft. of climate-controlled shopfloors in Pune — featuring 5-axis turning centers, heavy horizontal boring, automated cleanroom assembly, and a Class-10,000 Zeiss metrology laboratory.
+                Strategically distributed across 80,000+ sq. ft. of climate-controlled shopfloors in Noida, UP — featuring 5-axis turning centers, heavy horizontal boring, automated cleanroom assembly, and a Class-10,000 Zeiss metrology laboratory.
               </p>
 
               <div style="display: flex; flex-wrap: wrap; gap: 1rem;">
@@ -472,25 +472,25 @@ export function renderHomePage() {
             <!-- Right Deep Blue Panel: Plant Specifications -->
             <div class="infra-blue-panel">
               <div class="infra-locations-strip">
-                <div class="infra-location-chip"><span class="marker">●</span> CHAKAN MIDC</div>
-                <div class="infra-location-chip"><span class="marker">●</span> BHOSARI MIDC</div>
-                <div class="infra-location-chip"><span class="marker">●</span> TALEGAON MIDC</div>
-                <div class="infra-location-chip"><span class="marker">●</span> PUNE BELT</div>
+                <div class="infra-location-chip"><span class="marker">●</span> SECTOR 16 NOIDA</div>
+                <div class="infra-location-chip"><span class="marker">●</span> NOIDA INDUSTRIAL AREA</div>
+                <div class="infra-location-chip"><span class="marker">●</span> NCR CORRIDOR</div>
+                <div class="infra-location-chip"><span class="marker">●</span> UTTAR PRADESH</div>
               </div>
 
               <div class="infra-plant-cards">
                 <div class="infra-plant-item">
-                  <div class="infra-plant-name">Plant 1 — Chakan MIDC (35,000 sq. ft.)</div>
+                  <div class="infra-plant-name">Plant 1 — Sector 16 Noida Hub (35,000 sq. ft.)</div>
                   <div class="infra-plant-details">Heavy multi-axis CNC lathes, BT50 VMCs, Inconel machining bay, and 700-bar hydrostatic pressure proofing rig.</div>
                 </div>
 
                 <div class="infra-plant-item">
-                  <div class="infra-plant-name">Plant 2 — Bhosari MIDC (25,000 sq. ft.)</div>
+                  <div class="infra-plant-name">Plant 2 — Noida Industrial Area (25,000 sq. ft.)</div>
                   <div class="infra-plant-details">High-volume automotive common rail injector lines, hydraulic spool micro-honing cells, and cleanroom sub-assembly.</div>
                 </div>
 
                 <div class="infra-plant-item">
-                  <div class="infra-plant-name">Plant 3 — Talegaon & Shivleela (20,000 sq. ft.)</div>
+                  <div class="infra-plant-name">Plant 3 — NCR Precision & Shivleela (20,000 sq. ft.)</div>
                   <div class="infra-plant-details">Precision plastics mouldroom, EDM wire-cut division, and our pioneering women-led metrology and QA training academy.</div>
                 </div>
               </div>
@@ -605,7 +605,7 @@ export function renderHomePage() {
                 </svg>
               </div>
               <h3 class="value-add-title">JIT Delivery</h3>
-              <p class="value-add-desc">KanBan pull systems and managed inventory at our Pune facilities.</p>
+              <p class="value-add-desc">KanBan pull systems and managed inventory at our Noida facilities.</p>
             </div>
 
             <div class="value-add-card">
@@ -671,8 +671,8 @@ export function renderHomePage() {
                 </svg>
               </button>
 
-              <a href="tel:+919130303006" class="btn btn-white-outline btn-lg">
-                <span>TALK TO OUR ENGINEERS →</span>
+              <a href="tel:+918810656549" class="btn btn-white-outline btn-lg">
+                <span>TALK TO PRINCE SINGH →</span>
               </a>
             </div>
           </div>

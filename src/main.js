@@ -1,7 +1,8 @@
 /**
- * Primeline Components Pvt Ltd (PLC) — Master Client Application
+ * Forgeworks Components Pvt Ltd (FWC) — Master Client Application
+ * Founder & Managing Director: Prince Singh
  * Client-Side Router, Dynamic Lifecycle & Modal Controller
- * Tier-1 Precision Engineering Architecture
+ * Tier-1 Precision Engineering Architecture · Sector 16, Noida, UP
  */
 
 import { renderHeader } from './components/Header.js';

@@ -14,8 +14,8 @@ export function renderFooter() {
                 </svg>
               </div>
               <div class="brand-title-group">
-                <span class="brand-name" style="color: #FFFFFF;">PRIMELINE <span style="color: #A3D2F8;">COMPONENTS</span></span>
-                <span class="brand-sub" style="color: #BED6EB;">ABHANG GROUP · PUNE INDIA</span>
+                <span class="brand-name" style="color: #FFFFFF;">FORGEWORKS <span style="color: #A3D2F8;">COMPONENTS</span></span>
+                <span class="brand-sub" style="color: #BED6EB;">PRECISION ENGINEERING · NOIDA UP</span>
               </div>
             </div>
             
@@ -25,7 +25,7 @@ export function renderFooter() {
 
             <div style="display: flex; flex-direction: column; gap: 0.6rem;">
               <div class="tech-tag success" style="font-size: 0.68rem; background: rgba(30, 142, 62, 0.2); border-color: rgba(30, 142, 62, 0.4); color: #78E096;">
-                <span class="pulse-dot"></span> PUNE PLANTS OPERATING (3 SHIFTS / 24·7)
+                <span class="pulse-dot"></span> NOIDA PLANTS OPERATING (3 SHIFTS / 24·7)
               </div>
               <div class="tech-tag neutral" style="font-size: 0.68rem; background: rgba(255, 255, 255, 0.08); border-color: rgba(255, 255, 255, 0.15); color: #D1E5F7;">
                 MAKE IN INDIA · SERVING GLOBAL OEMS
@@ -59,23 +59,23 @@ export function renderFooter() {
             </ul>
           </div>
 
-          <!-- Col 4: Pune Plants & Contact -->
+          <!-- Col 4: Noida Plants & Contact -->
           <div>
             <div class="footer-col-title">Manufacturing Hub</div>
             <div style="font-size: 0.84rem; color: #BED6EB; display: flex; flex-direction: column; gap: 1rem;">
               <div>
-                <strong style="color: #FFFFFF; display: block; font-family: var(--font-mono); font-size: 0.76rem;">CHAKAN MIDC (PLANT 1)</strong>
-                <span>Plot C-18, Phase II, Chakan Industrial Area, Pune 410501</span>
+                <strong style="color: #FFFFFF; display: block; font-family: var(--font-mono); font-size: 0.76rem;">HEADQUARTERS & PLANT</strong>
+                <span>Sector 16, Noida, Uttar Pradesh - 201301, India</span>
               </div>
 
               <div>
-                <strong style="color: #FFFFFF; display: block; font-family: var(--font-mono); font-size: 0.76rem;">DIRECT CONTACT</strong>
+                <strong style="color: #FFFFFF; display: block; font-family: var(--font-mono); font-size: 0.76rem;">DIRECT CONTACT (PRINCE SINGH)</strong>
                 <a href="mailto:${COMPANY_DATA.contact.email}" style="color: #A3D2F8; display: block; font-family: var(--font-mono); font-size: 0.8rem;">
                   ${COMPANY_DATA.contact.email}
                 </a>
-                <span style="font-family: var(--font-mono); font-size: 0.8rem; color: #D1E5F7; display: block;">
-                  +91 9130303006 · +91 8956462142
-                </span>
+                <a href="tel:+918810656549" style="font-family: var(--font-mono); font-size: 0.8rem; color: #D1E5F7; display: block;">
+                  +91 8810656549
+                </a>
               </div>
 
               <div>
@@ -96,7 +96,7 @@ export function renderFooter() {
       <div class="footer-bottom">
         <div class="container footer-bottom-inner">
           <div>
-            © ${new Date().getFullYear()} Primeline Components Pvt. Ltd. (Abhang Group). All rights reserved.
+            © ${new Date().getFullYear()} Forgeworks Components Pvt. Ltd. All rights reserved.
           </div>
           <div style="display: flex; gap: 1.5rem; align-items: center;">
             <span>ISO 9001:2015</span>
@@ -105,7 +105,7 @@ export function renderFooter() {
             <span>·</span>
             <span>TUV AUSTRIA</span>
             <span>·</span>
-            <span style="color: #A3D2F8;">PUNE, MH, INDIA</span>
+            <span style="color: #A3D2F8;">NOIDA, UP, INDIA</span>
           </div>
         </div>
       </div>

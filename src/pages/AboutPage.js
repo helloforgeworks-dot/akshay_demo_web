@@ -8,13 +8,13 @@ export function renderAboutPage() {
         <div class="container">
           <div style="max-width: 820px; width: 100%;">
             <div class="tech-tag" style="margin-bottom: 1rem;">
-              <span class="pulse-dot"></span> ABHANG GROUP HERITAGE · FOUNDED 1996
+              <span class="pulse-dot"></span> FORGEWORKS GROUP · FOUNDED 1996 · NOIDA UP
             </div>
             <h1 style="font-size: clamp(2.2rem, 5vw, 3.8rem); margin-bottom: 1.25rem; line-height: 1.1; color: var(--text-primary);">
               Decades of Manufacturing Discipline. <span style="color: var(--brand-blue);">One Unified Standard.</span>
             </h1>
             <p style="font-size: 1.05rem; line-height: 1.75; color: var(--text-secondary); max-width: 100%;">
-              Primeline Components Pvt Ltd (PLC) represents the culmination of 25+ years of precision engineering across the Abhang Group. From early polymer tooling in 1996 to Tier-1 aerospace and oil & gas CNC machining today.
+              Forgeworks Components Pvt Ltd (FWC), led by Prince Singh, represents over 25+ years of combined manufacturing heritage. From early precision tooling in 1996 to Tier-1 aerospace, oil & gas, automotive, and defence CNC machining today.
             </p>
           </div>
         </div>
@@ -60,26 +60,38 @@ export function renderAboutPage() {
         </div>
       </section>
 
-      <!-- 2. CHAIRMAN'S & EXECUTIVE MESSAGE -->
+      <!-- 2. CHAIRMAN'S & EXECUTIVE MESSAGE (WITH PRINCE SINGH PROFILE PHOTO) -->
       <section class="section-py" style="background: var(--bg-secondary); border-top: 1px solid var(--border-color); border-bottom: 1px solid var(--border-color);">
         <div class="container">
           <div class="exec-message-grid">
-            <div style="background: #FFFFFF; border: 1px solid var(--border-color); padding: clamp(1.5rem, 3vw, 2.5rem); text-align: center; box-shadow: 0 8px 24px rgba(11,58,102,0.05); width: 100%; box-sizing: border-box;">
-              <div style="width: 76px; height: 76px; border-radius: 50%; background: var(--bg-light-blue); border: 2px solid var(--brand-blue); display: flex; align-items: center; justify-content: center; margin: 0 auto 1.25rem auto; color: var(--brand-blue);">
-                <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75">
-                  <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
-                  <circle cx="12" cy="7" r="4"></circle>
-                </svg>
+            <div style="background: #FFFFFF; border: 1px solid var(--border-color); padding: clamp(1.5rem, 3vw, 2.5rem); text-align: center; box-shadow: 0 8px 24px rgba(11,58,102,0.05); width: 100%; box-sizing: border-box; border-radius: 4px;">
+              <div style="width: 140px; height: 140px; border-radius: 50%; overflow: hidden; border: 3px solid var(--brand-blue); margin: 0 auto 1.25rem auto; box-shadow: 0 6px 18px rgba(11,58,102,0.15);">
+                <img 
+                  src="/images/prince_singh.jpg" 
+                  alt="Prince Singh - Founder & Managing Director, Forgeworks Components" 
+                  style="width: 100%; height: 100%; object-fit: cover; object-position: top center;"
+                />
               </div>
 
-              <h3 style="font-size: 1.25rem; margin-bottom: 0.35rem; color: var(--text-primary);">Executive Leadership</h3>
-              <div style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--brand-blue); text-transform: uppercase; font-weight: 700; margin-bottom: 1rem;">
-                Primeline Components Pvt. Ltd. · Abhang Group
+              <h3 style="font-size: 1.35rem; margin-bottom: 0.25rem; color: var(--text-primary);">Prince Singh</h3>
+              <div style="font-family: var(--font-mono); font-size: 0.76rem; color: var(--brand-blue); text-transform: uppercase; font-weight: 700; margin-bottom: 0.75rem;">
+                Founder & Managing Director
+              </div>
+              <div style="font-family: var(--font-mono); font-size: 0.72rem; color: var(--text-muted); margin-bottom: 1.25rem;">
+                Forgeworks Components Pvt. Ltd. · Noida, UP
               </div>
 
-              <p style="font-size: 0.88rem; color: var(--text-secondary); font-style: italic; line-height: 1.7;">
-                "Precision engineering is not merely an operational department — it is a discipline where trust is calibrated in microns."
-              </p>
+              <div style="display: flex; flex-direction: column; gap: 0.5rem; border-top: 1px solid var(--border-color); padding-top: 1rem; text-align: left; font-size: 0.8rem; font-family: var(--font-mono);">
+                <a href="mailto:helloforgeworks@gmail.com" style="color: var(--brand-blue); word-break: break-all;">
+                  ✉ helloforgeworks@gmail.com
+                </a>
+                <a href="tel:+918810656549" style="color: var(--text-primary); font-weight: 600;">
+                  📞 +91 8810656549
+                </a>
+                <span style="color: var(--text-muted);">
+                  📍 Sector 16, Noida, UP
+                </span>
+              </div>
             </div>
 
             <div style="width: 100%; box-sizing: border-box;">
@@ -90,8 +102,8 @@ export function renderAboutPage() {
               <blockquote style="font-size: 1.02rem; line-height: 1.8; color: var(--text-primary); margin-bottom: 1.25rem; border-left: 3px solid var(--brand-blue); padding-left: 1.15rem;">
                 ${COMPANY_DATA.leadership.message}
               </blockquote>
-              <div style="font-family: var(--font-mono); font-size: 0.78rem; color: var(--brand-blue); font-weight: 700;">
-                — BOARD OF DIRECTORS, PRIMELINE COMPONENTS PVT. LTD.
+              <div style="font-family: var(--font-mono); font-size: 0.8rem; color: var(--brand-blue); font-weight: 700;">
+                — PRINCE SINGH, FOUNDER & MANAGING DIRECTOR, FORGEWORKS COMPONENTS PVT. LTD.
               </div>
             </div>
           </div>

@@ -1,20 +1,23 @@
 /**
- * PRIMELINE COMPONENTS PVT LTD (PLC)
+ * FORGEWORKS COMPONENTS PVT LTD (FWC)
  * Master Brand Data & Technical Specifications
- * Part of the Abhang Group — Pune, India
+ * Sector 16, Noida, Uttar Pradesh, India
  */
 
 export const COMPANY_DATA = {
-  name: "Primeline Components Pvt. Ltd.",
-  shortName: "PLC",
-  group: "Abhang Group",
+  name: "Forgeworks Components Pvt. Ltd.",
+  shortName: "FWC",
+  group: "Forgeworks Group",
+  founder: "Prince Singh",
+  founderRole: "Founder & Managing Director",
+  founderImage: "/images/prince_singh.jpg",
   tagline: "Precision Engineering & CNC Machining",
   positioning: "Precision is not a claim here — it's a certification.",
   heroSubtext: "Engineering-led CNC machining, vertical milling, sub-assemblies, and high-precision component manufacturing for global aerospace, defence, oil & gas, and automotive OEMs.",
   
   stats: [
     { value: 25, suffix: "+", label: "Years Collective Group Experience", sub: "Since 1996 foundation" },
-    { value: 100, suffix: "+", label: "Advanced CNC & VMC Machines", sub: "Multi-axis fleet across Pune" },
+    { value: 100, suffix: "+", label: "Advanced CNC & VMC Machines", sub: "Multi-axis fleet across Noida & NCR" },
     { value: 100, suffix: "+", label: "Qualified Engineers & Metrologists", sub: "Dedicated QA & shopfloor" },
     { value: 4, suffix: " Global", label: "Quality Certifications", sub: "ISO 9001, IATF, IAF, TUV" },
     { value: 2, prefix: "±", suffix: " µm", label: "Machining Tolerance Capability", sub: "Strict dimensional compliance" }
@@ -62,30 +65,30 @@ export const COMPANY_DATA = {
   heritageTimeline: [
     {
       year: "1996",
-      title: "Raja Plastics & Engineering",
+      title: "Raja Plastics & Precision Tooling",
       subtitle: "Foundation of Precision Tooling",
-      description: "Established in Pune's emerging industrial belt with specialized focus on high-tolerance plastic injection moulding and precision tool manufacturing for industrial switchgear and early automotive tier-1 suppliers.",
+      description: "Established with specialized focus on high-tolerance plastic injection moulding and precision tool manufacturing for industrial switchgear and early automotive tier-1 suppliers.",
       highlight: "Inception of Group Manufacturing Excellence"
     },
     {
       year: "2010",
-      title: "Abhang Engineering",
+      title: "Forgeworks Heavy Machining Division",
       subtitle: "Expansion into Heavy CNC & VMC Machining",
       description: "Scaled manufacturing infrastructure with multi-axis CNC turning centers and vertical machining centers (VMC). Expanded into high-pressure oil & gas valve components, hydraulic manifolds, and export-grade sub-assemblies.",
       highlight: "Entry into Oil & Gas and Global Export Supply"
     },
     {
       year: "2018",
-      title: "Shivleela Engineering Works",
+      title: "Shivleela Precision Engineering Initiative",
       subtitle: "Pioneering Women's Skilled-Employment Initiative",
       description: "Dedicated production facility and training academy created specifically to train and employ women engineers and machine operators in precision CNC programming, QA metrology, and high-precision assembly.",
       highlight: "Social Impact & Inclusive Precision Engineering"
     },
     {
       year: "2025",
-      title: "Primeline Components Pvt Ltd (PLC)",
+      title: "Forgeworks Components Pvt Ltd (FWC)",
       subtitle: "Unified High-Precision Manufacturing Powerhouse",
-      description: "Consolidated group strengths under Primeline Components Pvt Ltd to create a state-of-the-art integrated precision manufacturing campus across Chakan, Bhosari, and Talegaon MIDC with 100+ CNC machines and Tier-1 global certification readiness.",
+      description: "Consolidated group strengths under Forgeworks Components Pvt Ltd to create a state-of-the-art integrated precision manufacturing campus led by Prince Singh with 100+ CNC machines and Tier-1 global certification readiness.",
       highlight: "Global Engineering-Led Tier-1 Supplier"
     }
   ],
@@ -303,22 +306,22 @@ export const COMPANY_DATA = {
   ],
 
   infrastructure: {
-    overview: "Our precision manufacturing infrastructure is strategically situated across the Pune industrial belt (Chakan, Bhosari, and Talegaon MIDC) — the heart of India's automotive and heavy engineering manufacturing ecosystem.",
+    overview: "Our precision manufacturing infrastructure is strategically situated in Noida (Sector 16 and NCR Industrial Corridor) — a key hub for aerospace, defence, automotive, and high-precision engineering in India.",
     facilities: [
       {
-        name: "Plant 1 — Chakan MIDC",
+        name: "Plant 1 — Sector 16 Noida Hub",
         focus: "Heavy CNC Machining, VMC & High-Pressure Oil & Gas Component Center",
         area: "35,000+ sq. ft. Temperature-Controlled Machining Hall",
         fleet: "Multi-Axis CNC Lathes, BT50 VMCs, Heavy Horizontals, Hydrostatic Pressure Rig"
       },
       {
-        name: "Plant 2 — Bhosari MIDC",
+        name: "Plant 2 — Noida Industrial Area",
         focus: "High-Volume Automotive, Hydraulic Spools & Specialized Sub-Assemblies",
         area: "25,000+ sq. ft. Clean Shopfloor & Automated Kitting Line",
         fleet: "High-Speed Dual-Spindle CNCs, Swiss Lathes, Dedicated Cleanroom Assembly Zone"
       },
       {
-        name: "Plant 3 — Talegaon / Shivleela Unit",
+        name: "Plant 3 — NCR Precision & Shivleela Unit",
         focus: "Plastics Injection Moulding, Rapid Tooling & Women-Led Precision QA Center",
         area: "20,000+ sq. ft. Toolroom & Metrology Center",
         fleet: "Electric Injection Presses (50T - 350T), EDM Wire-cut, Optical Metrology Suites"
@@ -400,7 +403,7 @@ export const COMPANY_DATA = {
     },
     {
       title: "JIT Delivery & Buffer Stocking for Tier-1 OEMs",
-      desc: "We offer KanBan pull systems, vendor-managed inventory (VMI), and strategic buffer stocks at our Pune facilities to ensure zero assembly downtime for domestic and export partners."
+      desc: "We offer KanBan pull systems, vendor-managed inventory (VMI), and strategic buffer stocks at our Noida facilities to ensure zero assembly downtime for domestic and export partners."
     },
     {
       title: "Export-Grade VCI Packaging & Sea-Worthy Crating",
@@ -414,14 +417,14 @@ export const COMPANY_DATA = {
 
   careers: {
     headline: "Engineered by Masters. Driven by Purpose.",
-    intro: "At Primeline Components (PLC), precision engineering is a discipline and a craft. As part of the Abhang Group, we foster a culture of technical rigor, continuous apprenticeship, and equal opportunity.",
-    shivleelaStory: "Through our Shivleela Engineering initiative, we take deep pride in pioneering specialized CNC training and skilled shopfloor employment for women engineers, CMM programmers, and metrology technicians across the Pune industrial belt.",
+    intro: "At Forgeworks Components (FWC), precision engineering is a discipline and a craft. Under the leadership of Prince Singh, we foster a culture of technical rigor, continuous apprenticeship, and equal opportunity.",
+    shivleelaStory: "Through our Shivleela Engineering initiative, we take deep pride in pioneering specialized CNC training and skilled shopfloor employment for women engineers, CMM programmers, and metrology technicians across our manufacturing units.",
     openRoles: [
       {
         id: "cnc-vmc-programmer",
         title: "Senior CNC & 5-Axis VMC Programmer",
         department: "Production & CAM Engineering",
-        location: "Chakan MIDC, Pune",
+        location: "Sector 16, Noida, UP",
         experience: "5 - 8 Years",
         skills: "Mastercam, Siemens NX, Fanuc / Heidenhain controls, multi-axis fixture design",
         description: "Develop optimized toolpaths, reduce cycle times, design custom fixtures, and lead zero-defect machining for aerospace and oil & gas valve components."
@@ -430,7 +433,7 @@ export const COMPANY_DATA = {
         id: "cmm-qa-lead",
         title: "Quality Assurance Lead & Zeiss CMM Metrologist",
         department: "Quality & Metrology Lab",
-        location: "Chakan / Bhosari MIDC, Pune",
+        location: "Sector 16, Noida, UP",
         experience: "4 - 7 Years",
         skills: "Zeiss Calypso software, GD&T ASME Y14.5, MSA, SPC, PPAP Level 3",
         description: "Lead metrology lab inspection schedules, program automated CMM inspection routines, manage calibration registers, and interface directly with OEM auditors."
@@ -438,8 +441,8 @@ export const COMPANY_DATA = {
       {
         id: "tooling-die-engineer",
         title: "Plastics Injection Mould & Tooling Engineer",
-        department: "Toolroom & Polymers (Raja Plastics Division)",
-        location: "Talegaon MIDC, Pune",
+        department: "Toolroom & Polymers Division",
+        location: "Noida Industrial Area, UP",
         experience: "3 - 6 Years",
         skills: "Mould design, SolidWorks, EDM wire-cut programming, polymer shrinkage analysis",
         description: "Design and maintain high-precision multi-cavity injection moulds for automotive sensors and high-performance engineering plastics (PEEK/POM)."
@@ -448,7 +451,7 @@ export const COMPANY_DATA = {
         id: "graduate-trainee-shivleela",
         title: "Graduate Engineer Trainee (GET) — Precision Machining & QA",
         department: "Shivleela Women's Skilled Engineering Initiative",
-        location: "Pune (All Units)",
+        location: "Noida / NCR Hub, UP",
         experience: "Freshers / 0 - 2 Years (B.E. / B.Tech / Diploma in Mechanical)",
         skills: "Engineering drawing reading, vernier/micrometer handling, enthusiasm for precision manufacturing",
         description: "Comprehensive 12-month hands-on apprenticeship covering CNC machine operation, metrology lab measurement, CAD/CAM fundamentals, and ISO/IATF quality systems."
@@ -457,38 +460,41 @@ export const COMPANY_DATA = {
   },
 
   leadership: {
-    message: "When you build components for a subsea valve, an aerospace guidance system, or a high-pressure common rail engine, precision is not a talking point. A deviation of two microns is the difference between seamless operation and catastrophic failure. At Primeline Components and across the Abhang Group, our entire culture — from our machine operators and CMM metrologists to our executive management — is built around uncompromising manufacturing discipline. We have invested in the finest multi-axis machinery, world-class Zeiss metrology, and a proud heritage dating back to 1996 to serve as the most trusted manufacturing partner to global OEMs.",
-    messageAuthor: "Executive Board & Managing Leadership",
-    messageRole: "Primeline Components Pvt. Ltd. (Abhang Group)",
+    message: "When you build components for a subsea valve, an aerospace guidance system, or a high-pressure common rail engine, precision is not a talking point. A deviation of two microns is the difference between seamless operation and catastrophic failure. At Forgeworks Components, our entire culture — from our machine operators and CMM metrologists to our executive management — is built around uncompromising manufacturing discipline. We have invested in the finest multi-axis machinery, world-class Zeiss metrology, and high-precision tooling to serve as the most trusted manufacturing partner to global OEMs.",
+    messageAuthor: "Prince Singh",
+    messageRole: "Founder & Managing Director, Forgeworks Components Pvt. Ltd.",
     pillars: [
       { title: "Zero Defect Philosophy", desc: "Instilling error-proofing (Poka-Yoke) and statistical process control across every single stage of production." },
       { title: "Engineering-First Mindset", desc: "Led by engineers who understand metallurgy, cutting dynamics, and GD&T inside out." },
       { title: "Social Empowerment", desc: "Championing women in precision manufacturing through the Shivleela Engineering Works initiative." },
-      { title: "Make in India Global Ambition", desc: "Delivering world-class precision machined parts from Pune to Tier-1 OEMs across Europe, North America, and Asia." }
+      { title: "Make in India Global Ambition", desc: "Delivering world-class precision machined parts from Noida, UP to Tier-1 OEMs across Europe, North America, and Asia." }
     ]
   },
 
   contact: {
-    email: "sales@primelinecomponents.in",
-    supportEmail: "info@primelinecomponents.in",
+    name: "Prince Singh",
+    role: "Founder & Managing Director",
+    email: "helloforgeworks@gmail.com",
+    supportEmail: "helloforgeworks@gmail.com",
+    phone: "+91 8810656549",
     phones: [
-      { number: "+91 9130303006", label: "Direct Sales & Engineering RFQ" },
-      { number: "+91 8956462142", label: "Plant Operations & Technical Support" }
+      { number: "+91 8810656549", label: "Direct Desk & Engineering RFQ (Prince Singh)" },
+      { number: "+91 8810656549", label: "Plant Operations & WhatsApp Support" }
     ],
     locations: [
       {
-        name: "Head Office & Machining Plant",
-        address: "Plot No. C-18, Chakan Industrial Area, Phase II, MIDC, Pune - 410501, Maharashtra, India",
+        name: "Head Office & Machining Campus",
+        address: "Sector 16, Noida, Uttar Pradesh - 201301, India",
         type: "Heavy CNC / VMC & Metrology Center"
       },
       {
-        name: "Bhosari Unit",
-        address: "Sector 10, PCNTDA, Bhosari MIDC, Pune - 411026, Maharashtra, India",
+        name: "Noida Industrial Unit",
+        address: "Sector 16 Industrial Area, Noida, UP - 201301, India",
         type: "Automotive Precision & Sub-Assemblies"
       },
       {
-        name: "Talegaon & Shivleela Unit",
-        address: "Talegaon Industrial Area, MIDC, Pune - 410507, Maharashtra, India",
+        name: "NCR Precision & Shivleela Unit",
+        address: "Noida / Greater Noida Industrial Corridor, UP, India",
         type: "Plastics Moulding & Skilled Training Center"
       }
     ],

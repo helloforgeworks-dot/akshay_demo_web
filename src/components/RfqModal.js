@@ -260,15 +260,15 @@ export function renderRfqModal() {
 
               <h3 style="font-size: 1.5rem; margin-bottom: 0.5rem; color: var(--text-primary);">Quotation Request Registered</h3>
               <p style="font-size: 0.92rem; max-width: 520px; margin: 0 auto 1.5rem auto; color: var(--text-secondary);">
-                Your technical drawing package and parameters have been transmitted to our senior tooling estimation engineers at Pune Chakan Facility.
+                Your technical drawing package and parameters have been transmitted to Prince Singh and our senior tooling estimation engineers at Sector 16 Noida Facility.
               </p>
 
               <div style="background: var(--bg-secondary); border: 1px solid var(--border-color); padding: 1rem 1.5rem; display: inline-block; font-family: var(--font-mono); font-size: 0.85rem; margin-bottom: 1.5rem;">
-                REFERENCE ID: <span id="rfq-ref-id" style="color: var(--brand-blue); font-weight: 700;">PLC-RFQ-2026-8942</span>
+                REFERENCE ID: <span id="rfq-ref-id" style="color: var(--brand-blue); font-weight: 700;">FWC-RFQ-2026-8942</span>
               </div>
 
               <div style="font-size: 0.82rem; color: var(--text-muted); margin-bottom: 1.5rem;">
-                Direct Engineer Hotline: <strong style="color: var(--text-primary);">+91 9130303006</strong> · <strong style="color: var(--brand-blue);">sales@primelinecomponents.in</strong>
+                Direct Engineer Hotline (Prince Singh): <strong style="color: var(--text-primary);">+91 8810656549</strong> · <strong style="color: var(--brand-blue);">helloforgeworks@gmail.com</strong>
               </div>
 
               <button type="button" class="btn btn-secondary" id="rfq-finish-btn">

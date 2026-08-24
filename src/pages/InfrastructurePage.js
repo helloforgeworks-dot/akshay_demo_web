@@ -10,13 +10,13 @@ export function renderInfrastructurePage() {
         <div class="container">
           <div style="max-width: 860px; width: 100%;">
             <div class="tech-tag" style="margin-bottom: 1rem;">
-              <span class="pulse-dot"></span> PUNE MIDC MANUFACTURING CAMPUS
+              <span class="pulse-dot"></span> NOIDA & NCR MANUFACTURING CAMPUS
             </div>
             <h1 style="font-size: clamp(2.2rem, 5vw, 3.8rem); margin-bottom: 1.25rem; line-height: 1.1; color: var(--text-primary);">
               World-Class Infrastructure & <span style="color: var(--brand-blue);">Metrology Lab</span>
             </h1>
             <p style="font-size: 1.05rem; line-height: 1.75; color: var(--text-secondary);">
-              Operating 80,000+ sq. ft. of climate-controlled machining halls and accredited metrology laboratories across Chakan, Bhosari, and Talegaon MIDC in Pune.
+              Operating 80,000+ sq. ft. of climate-controlled machining halls and accredited metrology laboratories across Sector 16 Noida and the NCR industrial corridor.
             </p>
           </div>
         </div>
@@ -104,7 +104,7 @@ export function renderInfrastructurePage() {
             <div class="tech-tag" style="margin-bottom: 0.75rem;">ZERO-DEFECT ARCHITECTURE</div>
             <h2 class="section-title">5-Stage Quality Assurance Workflow</h2>
             <p class="section-desc">
-              Every component passing through our Pune campus undergoes five distinct quality checkpoints before dispatch.
+              Every component passing through our Noida campus undergoes five distinct quality checkpoints before dispatch.
             </p>
           </div>
 

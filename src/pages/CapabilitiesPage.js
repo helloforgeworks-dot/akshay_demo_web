@@ -87,9 +87,9 @@ export function renderCapabilitiesPage() {
         <div class="container">
           <div class="section-header center">
             <div class="tech-tag" style="margin-bottom: 0.75rem; background: #FFFFFF;">FLEET ARCHITECTURE</div>
-            <h2 class="section-title">Pune Manufacturing Machine Fleet</h2>
+            <h2 class="section-title">Noida & NCR Manufacturing Machine Fleet</h2>
             <p class="section-desc">
-              Over 100 high-precision multi-axis machines deployed across Chakan, Bhosari, and Talegaon MIDC plants.
+              Over 100 high-precision multi-axis machines deployed across Sector 16 Noida, Industrial Area, and NCR facilities.
             </p>
           </div>
 
@@ -110,35 +110,35 @@ export function renderCapabilitiesPage() {
                   <td style="padding: 1rem 1.25rem; font-family: var(--font-mono);">5-Axis / Live Tooling / C-Axis</td>
                   <td style="padding: 1rem 1.25rem;">Ø3mm to Ø450mm x 1200mm</td>
                   <td style="padding: 1rem 1.25rem;">Inconel Valve Balls, Stem Shafts</td>
-                  <td style="padding: 1rem 1.25rem; color: var(--brand-blue); font-weight: 600;">Chakan MIDC</td>
+                  <td style="padding: 1rem 1.25rem; color: var(--brand-blue); font-weight: 600;">Sector 16 Noida</td>
                 </tr>
                 <tr style="border-bottom: 1px solid var(--border-color-subtle);">
                   <td style="padding: 1rem 1.25rem; font-weight: 700; color: var(--text-primary);">Heavy-Duty BT50 VMC Fleet</td>
                   <td style="padding: 1rem 1.25rem; font-family: var(--font-mono);">4-Axis / 12,000 RPM Spindles</td>
                   <td style="padding: 1rem 1.25rem;">X: 1200mm Y: 600mm Z: 650mm</td>
                   <td style="padding: 1rem 1.25rem;">Hydraulic Manifolds, Defence Casings</td>
-                  <td style="padding: 1rem 1.25rem; color: var(--brand-blue); font-weight: 600;">Chakan MIDC</td>
+                  <td style="padding: 1rem 1.25rem; color: var(--brand-blue); font-weight: 600;">Sector 16 Noida</td>
                 </tr>
                 <tr style="border-bottom: 1px solid var(--border-color-subtle);">
                   <td style="padding: 1rem 1.25rem; font-weight: 700; color: var(--text-primary);">High-Speed Swiss-Type Lathes</td>
                   <td style="padding: 1rem 1.25rem; font-family: var(--font-mono);">7-Axis Sliding Headstock</td>
                   <td style="padding: 1rem 1.25rem;">Ø2mm to Ø32mm Micro-Parts</td>
                   <td style="padding: 1rem 1.25rem;">Automotive Fuel Injectors, Sensors</td>
-                  <td style="padding: 1rem 1.25rem; color: var(--brand-blue); font-weight: 600;">Bhosari MIDC</td>
+                  <td style="padding: 1rem 1.25rem; color: var(--brand-blue); font-weight: 600;">Noida Industrial Area</td>
                 </tr>
                 <tr style="border-bottom: 1px solid var(--border-color-subtle);">
                   <td style="padding: 1rem 1.25rem; font-weight: 700; color: var(--text-primary);">All-Electric Injection Moulding</td>
                   <td style="padding: 1rem 1.25rem; font-family: var(--font-mono);">50T to 350T Clamping Force</td>
                   <td style="padding: 1rem 1.25rem;">Shot Weight 5g to 1200g</td>
                   <td style="padding: 1rem 1.25rem;">Engineering Polymers (PEEK/POM)</td>
-                  <td style="padding: 1rem 1.25rem; color: var(--brand-blue); font-weight: 600;">Talegaon MIDC</td>
+                  <td style="padding: 1rem 1.25rem; color: var(--brand-blue); font-weight: 600;">NCR Precision Plant</td>
                 </tr>
                 <tr>
                   <td style="padding: 1rem 1.25rem; font-weight: 700; color: var(--text-primary);">Hydrostatic Pressure Test Rig</td>
                   <td style="padding: 1rem 1.25rem; font-family: var(--font-mono);">Automated Data-Logged Proof Rig</td>
                   <td style="padding: 1rem 1.25rem;">Up to 700 Bar (10,150 PSI)</td>
                   <td style="padding: 1rem 1.25rem;">API 6D Valve Trims & Sub-Assemblies</td>
-                  <td style="padding: 1rem 1.25rem; color: var(--brand-blue); font-weight: 600;">Chakan MIDC</td>
+                  <td style="padding: 1rem 1.25rem; color: var(--brand-blue); font-weight: 600;">Sector 16 Noida</td>
                 </tr>
               </tbody>
             </table>

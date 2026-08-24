@@ -1,6 +1,6 @@
 /**
  * Facility Tour Modal Component
- * Book a technical plant visit to Pune MIDC facilities
+ * Book a technical plant visit to Noida facilities
  */
 export function renderFacilityTourModal() {
   return `
@@ -9,7 +9,7 @@ export function renderFacilityTourModal() {
         <div class="modal-header">
           <div class="modal-title-wrap">
             <div class="tech-tag" style="margin-bottom: 0.35rem;">
-              <span class="pulse-dot"></span> PUNE MIDC TECHNICAL AUDIT
+              <span class="pulse-dot"></span> NOIDA & NCR TECHNICAL AUDIT
             </div>
             <h3>Schedule Technical Facility Tour</h3>
           </div>
@@ -20,17 +20,17 @@ export function renderFacilityTourModal() {
 
         <div class="modal-body">
           <p style="font-size: 0.88rem; margin-bottom: 1.5rem; color: var(--text-secondary);">
-            We invite OEM supplier quality engineers, procurement directors, and technical teams to audit our machining halls, Zeiss metrology lab, and cleanroom assembly lines in Pune.
+            We invite OEM supplier quality engineers, procurement directors, and technical teams to audit our machining halls, Zeiss metrology lab, and cleanroom assembly lines in Noida, UP.
           </p>
 
           <form id="tour-schedule-form">
             <div class="form-group">
               <label class="form-label">Select Facility to Visit <span class="req">*</span></label>
               <select class="form-select" id="tour-facility" required>
-                <option value="chakan">Plant 1 — Chakan MIDC (Heavy CNC, VMC & 700 Bar Hydrostatic Lab)</option>
-                <option value="bhosari">Plant 2 — Bhosari MIDC (Automotive Spools & Cleanroom Sub-Assemblies)</option>
-                <option value="talegaon">Plant 3 — Talegaon MIDC (Plastics Tooling & Shivleela QA Center)</option>
-                <option value="all">Comprehensive Full-Campus Tour (All Pune Units)</option>
+                <option value="sector16">Plant 1 — Sector 16 Noida Hub (Heavy CNC, VMC & 700 Bar Hydrostatic Lab)</option>
+                <option value="noida-ind">Plant 2 — Noida Industrial Area (Automotive Spools & Cleanroom Sub-Assemblies)</option>
+                <option value="ncr-shivleela">Plant 3 — NCR Precision & Shivleela QA Center</option>
+                <option value="all">Comprehensive Full-Campus Tour (All Noida & NCR Units)</option>
               </select>
             </div>
 
@@ -67,7 +67,7 @@ export function renderFacilityTourModal() {
               </div>
               <div class="form-group">
                 <label class="form-label">Contact Phone / WhatsApp <span class="req">*</span></label>
-                <input type="tel" class="form-input" id="tour-phone" placeholder="+91 9130303006" required>
+                <input type="tel" class="form-input" id="tour-phone" placeholder="+91 8810656549" required>
               </div>
             </div>
 

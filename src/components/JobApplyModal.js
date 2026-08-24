@@ -61,7 +61,7 @@ export function renderJobApplyModal() {
 
             <div id="job-app-success" style="display: none; background: rgba(30, 142, 62, 0.1); border: 1px solid var(--status-green); padding: 1rem; margin-bottom: 1.5rem; text-align: center;">
               <strong style="color: var(--status-green); display: block; font-family: var(--font-mono); font-size: 0.85rem;">APPLICATION TRANSMITTED SUCCESSFULLY</strong>
-              <span style="font-size: 0.82rem; color: var(--text-secondary);">Our HR and Engineering Team at Pune Facility will review your credentials.</span>
+              <span style="font-size: 0.82rem; color: var(--text-secondary);">Our HR and Engineering Team at Sector 16 Noida Facility will review your credentials.</span>
             </div>
 
             <div style="display: flex; justify-content: flex-end; gap: 1rem; border-top: 1px solid var(--border-color); padding-top: 1.5rem; margin-top: 1rem;">

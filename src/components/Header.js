@@ -1,5 +1,5 @@
 /**
- * Header Component for Primeline Components Pvt Ltd
+ * Header Component for Forgeworks Components Pvt Ltd
  * Tier-1 Precision Engineering — White & Engineering Blue Aesthetic
  */
 export function renderHeader(currentPath = '/') {
@@ -13,8 +13,8 @@ export function renderHeader(currentPath = '/') {
             </svg>
           </div>
           <div class="brand-title-group">
-            <span class="brand-name">PRIMELINE <span>COMPONENTS</span></span>
-            <span class="brand-sub">ABHANG GROUP · PUNE INDIA</span>
+            <span class="brand-name">FORGEWORKS <span>COMPONENTS</span></span>
+            <span class="brand-sub">PRECISION ENGINEERING · NOIDA UP</span>
           </div>
         </a>
 
@@ -71,13 +71,13 @@ export function renderHeader(currentPath = '/') {
               </a>
             </li>
             <li>
-              <a href="/about" class="nav-link nav-route" data-path="/about">
-                QUALITY
+              <a href="/careers" class="nav-link nav-route ${currentPath === '/careers' ? 'active' : ''}" data-path="/careers">
+                CAREERS
               </a>
             </li>
             <li>
-              <a href="/careers" class="nav-link nav-route ${currentPath === '/careers' ? 'active' : ''}" data-path="/careers">
-                CAREERS
+              <a href="/contact" class="nav-link nav-route ${currentPath === '/contact' ? 'active' : ''}" data-path="/contact">
+                CONTACT
               </a>
             </li>
           </ul>
@@ -106,7 +106,7 @@ export function renderHeader(currentPath = '/') {
       <div class="mobile-nav-drawer" id="mobile-nav-drawer">
         <div class="mobile-drawer-header">
           <div class="tech-tag" style="margin-bottom: 0.5rem;">
-            <span class="pulse-dot"></span> PUNE PRECISION MANUFACTURING HUB
+            <span class="pulse-dot"></span> NOIDA PRECISION MANUFACTURING HUB
           </div>
         </div>
         <ul class="mobile-nav-links">
@@ -115,15 +115,15 @@ export function renderHeader(currentPath = '/') {
           <li><a href="/capabilities" class="nav-link nav-route ${currentPath === '/capabilities' ? 'active' : ''}" data-path="/capabilities">CAPABILITIES</a></li>
           <li><a href="/products" class="nav-link nav-route ${currentPath === '/products' ? 'active' : ''}" data-path="/products">PRODUCTS & INDUSTRIES</a></li>
           <li><a href="/infrastructure" class="nav-link nav-route ${currentPath === '/infrastructure' ? 'active' : ''}" data-path="/infrastructure">INFRASTRUCTURE</a></li>
-          <li><a href="/about" class="nav-link nav-route" data-path="/about">QUALITY</a></li>
           <li><a href="/careers" class="nav-link nav-route ${currentPath === '/careers' ? 'active' : ''}" data-path="/careers">CAREERS</a></li>
+          <li><a href="/contact" class="nav-link nav-route ${currentPath === '/contact' ? 'active' : ''}" data-path="/contact">CONTACT</a></li>
         </ul>
         <div style="margin-top: auto; display: flex; flex-direction: column; gap: 0.75rem; padding-top: 1.5rem; border-top: 1px solid var(--border-color);">
           <button type="button" class="btn btn-primary trigger-rfq-modal" style="width: 100%;">
             <span>REQUEST A QUOTE</span>
           </button>
-          <a href="tel:+919130303006" class="btn btn-secondary" style="width: 100%; text-align: center;">
-            <span>CALL: +91 9130303006</span>
+          <a href="tel:+918810656549" class="btn btn-secondary" style="width: 100%; text-align: center;">
+            <span>CALL: +91 8810656549</span>
           </a>
         </div>
       </div>

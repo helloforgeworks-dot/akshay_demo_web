@@ -48,7 +48,7 @@ export function renderCareersPage() {
       <section class="section-py" style="background: #FFFFFF;">
         <div class="container">
           <div class="section-header">
-            <div class="tech-tag" style="margin-bottom: 0.75rem;">OPEN POSITIONS · PUNE PLANTS</div>
+            <div class="tech-tag" style="margin-bottom: 0.75rem;">OPEN POSITIONS · NOIDA & NCR PLANTS</div>
             <h2 class="section-title">Join Our Precision Engineering Ranks</h2>
             <p class="section-desc">
               Work with the latest 5-axis DMG MORI / Mazak machining centers, Zeiss 3D CMMs, and Tier-1 aerospace/defence projects.
